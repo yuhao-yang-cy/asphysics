@@ -1,0 +1,210 @@
+\documentclass[b5paper,11pt]{article}
+\usepackage[top=12ex, bottom=12ex, left=8ex, right=8ex,showframe=false]{geometry}
+\linespread{1.6}
+\usepackage[ampersand]{easylist}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{ \fancyplain{}{Yuhao Yang} }
+\rhead{ \fancyplain{}{\leftmark} }
+\cfoot{ \fancyplain{}{\thepage} }
+\usepackage[unicode]{hyperref}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{latexsym}
+\usepackage{pifont}
+\usepackage{fourier}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{extarrows}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows,positioning,calc,fadings,shapes,decorations.markings}
+\usepackage{array}
+\usepackage{anyfontsize}
+\usepackage{circuitikz}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{stmaryrd}
+\usepackage{paralist}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{tcolorbox}
+\usepackage{easyunits}
+\usepackage{wrapfig}
+\usepackage{xfrac}
+\usepackage{caption}
+\usepackage{titletoc}
+\usepackage[explicit]{titlesec}
+\usepackage[makeroom]{cancel}
+\usepackage[bottom]{footmisc}
+\usepackage{ifthen}
+
+% % % % % % % % % %
+
+\def\includequestions{1}
+
+
+% section title style
+\titleformat{name=\section}[block]
+{\begin{center}\begin{tikzpicture}}
+	{\draw[line width=4pt, Gray!70] (0,0) rectangle (12,3.2);
+		\node at (6,2.4) {\Huge\sc\bfseries\textcolor{purple}{Chapter \thesection}};}
+	{0pt}
+	{\node at (6,0.9) {\huge\filright\textcolor{purple}{#1}};}[\end{tikzpicture}\end{center}]
+
+% table of contents sytle
+\titlecontents{section}[9pc]
+{\addvspace{10pt}%
+	\begin{tikzpicture}[remember picture, overlay]%
+	\draw[fill=Gray!70,draw=Gray!70] (-4,-0.1) rectangle (-0.8,0.5);
+	\node at (-2.4,0.2){\color{white}\Large\sc\bfseries chapter\ \thecontentslabel};%
+	\end{tikzpicture}\color{Gray}\hspace*{-10pt}\large\bfseries}%
+{}
+{}
+{\;\titlerule\;\large\sc\bfseries Page \thecontentspage
+	\begin{tikzpicture}[remember picture, overlay]
+	\draw[fill=Gray!70,draw=Gray!70] (2pt,0) rectangle (6,0.1pt);
+	\end{tikzpicture}}%
+\titlecontents{subsection}[8.1pc]
+{\addvspace{1pt}}
+{\contentslabel[\thecontentslabel]{2.1pc}}{}
+{\hfill\small \thecontentspage}[]
+\titlecontents*{subsubsection}[8.1pc]
+{\addvspace{-1pt}\small}{}{}
+{\ - \small\thecontentspage}
+[ /\ ][]
+
+
+
+% font type
+\renewcommand*\rmdefault{ppl}
+%\newcommand{\dd}{\mathrm{d}}
+%\newcommand{\ee}{\mathrm{e}}
+
+% equation box
+\makeatletter
+\renewcommand{\boxed}[1]{\textcolor{black}{%
+\tikz[baseline={([yshift=-.72ex] current bounding box.center)}] \node [thick, rectangle, minimum width=1ex,rounded corners,fill=yellow!30, draw=orange] {\normalcolor\m@th$\displaystyle#1$};}}
+\tikzset{nomorepostaction/.code={\let\tikz@postactions\pgfutil@empty}}
+\renewcommand\normalsize{%
+	\@setfontsize\normalsize\@xpt\@xiipt
+	\abovedisplayskip 0\p@ plus 5\p@ minus 3\p@
+	\belowdisplayskip 0\p@ plus 5\p@ minus 3\p@
+	\abovedisplayshortskip 0\p@ plus 5\p@ minus 3\p@
+	\belowdisplayshortskip 0\p@ plus 5\p@ minus 3\p@
+	\let\@listi\@listI}
+\setlength{\@fptop}{0pt}
+\newcommand{\specialcell}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\ignorespaces\fi}
+\makeatother
+
+
+% % % % % % % % % %
+
+\DeclareGraphicsExtensions{.eps,.mps,.pdf,.jpg,.png}
+\graphicspath{{figures/}}
+\renewcommand\thefootnote{\textcolor{blue}{[\arabic{footnote}]}}
+\hypersetup{
+    colorlinks, linkcolor={purple}, citecolor={blue}, urlcolor={blue},
+    pdftitle={Cambridge International A-Level Physics Course Handout},
+    pdfauthor={Yuhao Yang},
+    pdfsubject={A-Level Physics} }
+
+% tikz arrows
+\tikzset{>=stealth', pil/.style={ ->, thick, shorten <=2pt, shorten >=2pt,} }
+
+% tikz decription node style
+\tikzset{note/.style={rectangle, rounded corners, minimum size=6mm, draw=black, fill=white, font=\itshape, align=center,execute at begin node=\setlength{\baselineskip}{1.2em}}}
+\tikzset{graphlabel/.style={postaction={decorate,transform shape, decoration={markings, mark=at position .5 with \node #1;}}}}
+\tikzset{twoline/.style={align=center,execute at begin node=\setlength{\baselineskip}{1.2em}}}
+\tikzset{twolinecap/.style={align=center,execute at begin node=\setlength{\baselineskip}{1.6em}}}
+
+
+% % % % % % % % % % %
+
+% example + question + exercise environment
+\newcounter{example}[section]
+\newcounter{exercise}[section]
+\newcounter{question}[section]
+\renewcommand{\theexample}{\arabic{section}.\arabic{example}}
+\renewcommand{\theexercise}{\arabic{section}.\arabic{exercise}}
+\renewcommand{\thequestion}{\arabic{section}.\arabic{question}}
+
+\newcommand{\example}[1]{%
+	\refstepcounter{example}
+	\noindent {\textcolor{cyan}{\textsf{\textbf{Example \theexample }}} \hspace*{1pt} #1 %
+}}
+\newcommand{\question}[1]{%
+	\refstepcounter{question}
+	\noindent{\textcolor{magenta}{\textsf{\textbf{Question \thequestion }}} \hspace*{1pt} #1 %
+}}
+\newcommand{\exercise}[1]{%
+	\refstepcounter{exercise}
+	\noindent{\textsf{\textbf{Exercise \theexercise }} \hspace*{1pt} #1 %
+}}
+
+\newcommand{\cmt}{\noindent\hspace{-0.25em}\textcolor{Green}{\ding{226}} \hspace{0.2em}}
+\newcommand{\sol}{\noindent\hspace{-0.12em}\textcolor{cyan}{\ding{45}} \hspace{0.2em}}
+\newcommand{\solc}{\noindent\hspace{-0.12em}\textcolor{cyan}{\ding{45}} \hspace{0.2em} \vspace*{-\baselineskip}} 
+
+% highlight environment
+\newenvironment{ilight}
+{\centering
+	\vspace*{6pt}
+	\begin{tcolorbox}[colframe=Gray,colback=LightGrey!15]
+		\setlength{\baselineskip}{\baselineskip}%
+	}
+	{\end{tcolorbox}\vspace*{-4pt}}
+
+
+\newcommand{\keypoint}[1]{\textbf{\textcolor{red}{#1}}}
+
+% indentation and line spacing in itemize environment
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\everymath{\displaystyle}
+
+% indentation of paragraphs and table of contents
+\setlength{\parindent}{1.2em}
+%\setlength{\cftsecindent}{0em}
+%\setlength{\cftsubsecindent}{0.7em}
+%\setlength{\cftsubsubsecindent}{1.5em}
+
+% columns with customised width in tabulars
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{D}[1]{ >{\centering\arraybackslash} m{1cm} }
+
+\begin{document}
+\thispagestyle{empty}
+\include{cover}
+\thispagestyle{empty}
+
+\newpage
+
+\setcounter{page}{1}
+\pagenumbering{roman} 
+\tableofcontents
+%\listoffigures
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\include{issues}
+\include{physical-quantities}
+\include{kinematics}
+\include{newton-laws}
+%\include{equilibrium}
+%\include{work-energy}
+%\include{momentum}
+%\include{deformation}
+%\include{kinetic-model}
+%\include{waves}
+%\include{electrostatics}
+%\include{current}
+%\include{nuclear-physics}
+
+%\newpage
+%\printindex
+
+\end{document}
