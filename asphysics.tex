@@ -38,6 +38,7 @@
 \usepackage[makeroom]{cancel}
 \usepackage[bottom]{footmisc}
 \usepackage{ifthen}
+\usepackage{makeidx}
 
 % % % % % % % % % %
 
@@ -174,6 +175,8 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{D}[1]{ >{\centering\arraybackslash} m{1cm} }
 
+\makeindex
+
 \begin{document}
 \thispagestyle{empty}
 \include{cover}
@@ -204,7 +207,7 @@
 %\include{current}
 %\include{nuclear-physics}
 
-%\newpage
-%\printindex
+\newpage
+\printindex
 
 \end{document}
