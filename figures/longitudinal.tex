@@ -1,0 +1,33 @@
+\documentclass[a4paper,12pt,oneside]{article}
+\usepackage[usenames,svgnames]{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{arrows}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2pt}%
+
+\renewcommand*\rmdefault{ppl}
+
+\tikzset{>=stealth', pil/.style={ ->, thick, shorten <=2pt, shorten >=2pt,} }
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1]
+\foreach \i in {1,2,...,400} \draw[fill] (rnd*16,rnd*2) circle (0.025);
+\foreach \i in {1,2,...,150}{
+	\draw[fill] (rnd*.8+2.1,rnd*2) circle (0.025);
+	\draw[fill] (rnd*.8+7.1,rnd*2) circle (0.025);
+	\draw[fill] (rnd*.8+12.1,rnd*2) circle (0.025);
+}
+\draw[<->,thick] (7.5,2.4) -- (12.5,2.4) node[midway,above]{one wavelength};
+\draw[->,thick] (1,2.4) -- (4,2.4) node[midway,above]{wave motion};
+\node[below] at (2.5,-.2) {compression};
+\node[below] at (7.5,-.2) {compression};
+\node[below] at (12.5,-.2) {compression};
+\node[below] at (5,-.2) {rarefaction};
+\node[below] at (10,-.2) {rarefaction};
+\node[below] at (15,-.2) {rarefaction};
+\end{tikzpicture}
+
+\end{document}
