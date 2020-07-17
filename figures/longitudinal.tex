@@ -14,20 +14,21 @@
 \begin{document}
 
 \begin{tikzpicture}[scale=1]
-\foreach \i in {1,2,...,400} \draw[fill] (rnd*16,rnd*2) circle (0.025);
-\foreach \i in {1,2,...,150}{
-	\draw[fill] (rnd*.8+2.1,rnd*2) circle (0.025);
-	\draw[fill] (rnd*.8+7.1,rnd*2) circle (0.025);
-	\draw[fill] (rnd*.8+12.1,rnd*2) circle (0.025);
+\pgfmathsetmacro{\noe}{6}
+
+\foreach \t in {0,0.1,...,14}{
+	\pgfmathsetmacro{\np}{pow({1+cos((\t-2)*pi/2.5 r)}, 4)*\noe/4}
+	\foreach \idx in {0,1,...,\np} {
+		\draw[fill] (\t+rnd*0.1-0.05,rnd*1.8) circle (0.025);	% wave 1
+	}
 }
-\draw[<->,thick] (7.5,2.4) -- (12.5,2.4) node[midway,above]{one wavelength};
-\draw[->,thick] (1,2.4) -- (4,2.4) node[midway,above]{wave motion};
-\node[below] at (2.5,-.2) {compression};
-\node[below] at (7.5,-.2) {compression};
-\node[below] at (12.5,-.2) {compression};
-\node[below] at (5,-.2) {rarefaction};
-\node[below] at (10,-.2) {rarefaction};
-\node[below] at (15,-.2) {rarefaction};
+\draw[<->,thick] (7,2.4) -- (12,2.4) node[midway,above]{{\footnotesize one wavelength}};
+\draw[->,thick] (1,2.4) -- (4,2.4) node[midway,above]{{\footnotesize wave motion}};
+\node[below] at (2,-.2) {{\footnotesize compression}};
+\node[below] at (7,-.2) {{\footnotesize compression}};
+\node[below] at (12,-.2) {{\footnotesize compression}};
+\node[below] at (4.5,-.2) {{\footnotesize rarefaction}};
+\node[below] at (9.5,-.2) {{\footnotesize rarefaction}};
 \end{tikzpicture}
 
 \end{document}

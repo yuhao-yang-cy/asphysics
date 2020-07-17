@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[usenames,svgnames]{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{10pt}%
+\renewcommand*\rmdefault{ppl}
+
+\begin{document}
+	
+	% 2a = path difference; dr = wavelength ; c = wave source coordinate
+	\begin{tikzpicture}[scale=.5]
+	\pgfmathsetmacro{\c}{3.35}
+	\foreach \r in {2,4,6,8,10,12}{
+		\draw[blue,thick] (\c+\r,0) arc(0:180:\r);
+		\draw[Green,thick] (-\c+\r,0) arc(0:180:\r);
+	}
+	\node at (-\c,0)[below] {{\large $A$}};
+	\node at (\c,0)[below] {{\large $B$}};
+	\draw[red,very thick] (0,0) -- (0,14) (0,14.15) node[above,black]{{\large C$_0$}};
+	\foreach \a in {1,2,3}{
+		\pgfmathsetmacro{\ym}{14-pow(\a,3)/4}
+		\pgfmathsetmacro{\xm}{\a*sqrt(1+\ym*\ym/(\c*\c-\a*\a))}
+		\draw [red,very thick,samples=150,domain=\a:\xm] plot (\x, {sqrt(\x*\x/\a/\a-1)*sqrt(\c*\c-\a*\a)});
+		\draw [red,very thick,samples=150,domain=-\xm:-\a] plot (\x, {sqrt(\x*\x/\a/\a-1)*sqrt(\c*\c-\a*\a)});
+		\pgfmathsetmacro{\xy}{1.2*sqrt(\xm*\xm+\ym*\ym)}
+		\draw[thick] (\xm,\ym) ++ (\xm/\xy,\ym/\xy) node{{\large C$_\a$}};
+		\draw[thick] (-\xm,\ym) ++ (-\xm/\xy,\ym/\xy) node{{\large C$_\a$}};
+	}
+	\foreach \a/\alabel in {.5/1,1.5/2,2.5/3}{
+		\pgfmathsetmacro{\ym}{14-pow(\a,3)/4}
+		\pgfmathsetmacro{\xm}{\a*sqrt(1+\ym*\ym/(\c*\c-\a*\a))}
+		\draw [red,very thick,dotted,samples=150,domain=\a:\xm] plot (\x, {sqrt(\x*\x/\a/\a-1)*sqrt(\c*\c-\a*\a)});
+		\draw [red,very thick,dotted,samples=150,domain=-\xm:-\a] plot (\x, {sqrt(\x*\x/\a/\a-1)*sqrt(\c*\c-\a*\a)});
+		\pgfmathsetmacro{\xy}{1.2*sqrt(\xm*\xm+\ym*\ym)}
+		\draw[thick] (\xm,\ym) ++ (\xm/\xy,\ym/\xy) node{{\large D$_\alabel$}};
+		\draw[thick] (-\xm,\ym) ++ (-\xm/\xy,\ym/\xy) node{{\large D$_\alabel$}};
+	}
+	\end{tikzpicture}
+	
+\end{document}

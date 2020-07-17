@@ -1,0 +1,38 @@
+\documentclass[a4paper,12pt,oneside]{article}
+\usepackage[usenames,svgnames]{xcolor}
+
+%\usepackage{ifthen}
+\usepackage{tikz}
+%\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2pt}%
+
+\renewcommand*\rmdefault{ppl}
+\tikzset{note/.style={rectangle, rounded corners, minimum size=6mm, draw=black, fill=white, font=\itshape, align=center,execute at begin node=\setlength{\baselineskip}{1.2em}}}
+\tikzset{graphlabel/.style={postaction={decorate,transform shape, decoration={markings, mark=at position .5 with \node #1;}}}}
+
+\begin{document}
+\begin{center}
+\begin{tikzpicture}[scale=1]
+% average number of points to plot at each x coordinate
+\pgfmathsetmacro{\noe}{6}
+
+\foreach \t in {0,0.1,...,8}{
+	\pgfmathsetmacro{\np}{\noe+\noe*cos((\t-2)*0.5*pi r)}
+		\foreach \idx in {0,1,...,\np} {
+		\draw[fill] (\t+rnd*0.1-0.05,rnd*1.5) circle (0.025);	% wave 1
+		\draw[fill] (\t+rnd*0.1-0.05,rnd*1.5-2) circle (0.025);	% wave 2
+		}
+	\pgfmathsetmacro{\npres}{pow({1+cos((\t-2)*0.5*pi r)}, 6)*\noe/14}
+		\foreach \idx in {0,1,...,\npres}
+		\draw[fill] (\t+rnd*0.1-0.05,rnd*1.5-4) circle (0.025);	% resultant
+}
+\node[note] at (0.6,0.75){\footnotesize{wave 1}};
+\node[note] at (0.6,-1.25){\footnotesize{wave 2}};
+\node[note] at (0.8,-3.25){\footnotesize{resultant}};
+\end{tikzpicture}
+\end{center}
+
+\end{document}
