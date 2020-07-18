@@ -16,7 +16,7 @@ wave motion is the propagation of disturbance from one place to another
 
 \begin{figure}[ht]
 	\centering
-	\begin{tikzpicture}[scale=1.1]
+	\begin{tikzpicture}[xscale=1.2, yscale=0.95]
 	\draw [->] (0,-2) -- (0,2.4) node[midway,left]{$O$} node[above]{displacement};
 	\draw [->] (0,0) -- (3.1*pi,0) node[below]{position};
 	\draw[very thick,->] (1.8*pi,2) -- (2.6*pi,2);
@@ -38,17 +38,19 @@ to describe the wave motion and particle vibrations, we can define the following
 
 distance from a particle's equilibrium position is called \keypoint{displacement} of the particle 
 
+\cmt greatest displacement for a particle is called the \keypoint{amplitude} ($A$) \index{amplitude}
+
 \cmt wave pattern repeats itself over a certain distance
 
-distance between two adjacent points undergoing exactly same motion is the \keypoint{wavelength} ($\lambda$)
+distance between two adjacent points undergoing exactly same motion is the \keypoint{wavelength} ($\lambda$) \index{wavelength}
 
 one can think of wavelength as crest-to-crest distance, trough-to-trough distance, etc.\footnote{For now, we take for granted that a wave is transverse. There are also longitudinal waves for which terms like crest and trough do not apply. We will get into that in \S\ref{ch-Lwaves}.}
 
 \cmt each point also repeats its vibrational motion over a certain time interval
 
-time for a particle to complete a full oscillation cycle is the  \keypoint{period} ($T$)
+time for a particle to complete a full oscillation cycle is the  \keypoint{period} ($T$) \index{period}
 
-\cmt number of oscillations for a particle per unit time is the \keypoint{frequency} ($f$)
+\cmt number of oscillations for a particle per unit time is the \keypoint{frequency} ($f$) \index{frequency}
 
 frequency can also be defined as the number of crests passing a given point per unit time
 
@@ -115,7 +117,7 @@ a wave can either be \emph{transverse} or \emph{longitudinal}, depending on the 
 \subsubsection{transverse waves}
 
 \begin{ilight}
-	a \keypoint{transverse} wave has vibrations at right angle to its direction of energy transfer
+	a \keypoint{transverse} wave has vibrations at right angle to its direction of energy transfer \index{transverse wave}
 \end{ilight}
 
 \cmt examples of transverse waves: wave on a string, surface wave on water, light wave, etc.
@@ -128,7 +130,7 @@ greatest displacement in negative direction is called a \emph{trough}
 \subsubsection{longitudinal waves} \label{ch-Lwaves}
 
 \begin{ilight}
-	a \keypoint{longitudinal} wave has vibrations in parallel direction to energy transfer
+	a \keypoint{longitudinal} wave has vibrations in parallel direction to energy transfer \index{longitudinal wave}
 \end{ilight}
 
 \cmt examples of longitudinal waves: sound waves, wave along a stretched slinky, etc.
@@ -188,7 +190,7 @@ if a medium expands, we say this region is a \emph{rarefaction}
 
 \subsubsection{sound waves}
 
-sound waves propagate via the compression and rarefaction of air (or other medium)
+sound waves propagate via the compression and rarefaction of air (or other medium) \index{sound}
 
 molecules near vibrating source is pushed away from rest positions and into their neighbours
 
@@ -229,7 +231,7 @@ a greater amplitude means the wave is more energetic so it sounds louder
 
 \subsubsection*{measurement of sound waves}
 
-two key apparatuses for sound measurement are the \keypoint{microphone} and the \keypoint{oscilloscope}
+two key apparatuses for sound measurement are the \keypoint{microphone} and the \keypoint{oscilloscope} \index{oscilloscope}
 
 oscilloscope can be thought as an upgraded voltmeter showing how voltage varies with time
 
@@ -282,7 +284,7 @@ then frequency of sound wave is calculated: $f=\frac{1}{T}$
 
 \subsection{electromagnetic waves}
 
-a wave can be either \emph{mechanical} or \emph{electromagnetic}, depending on whether it requires a medium
+a wave can be either \emph{mechanical} or \emph{electromagnetic}, depending on whether it requires a medium\index{electromagnetic wave}
 
 \cmt waves that require a \emph{medium} to travel are called \keypoint{mechanical waves}
 
@@ -602,7 +604,7 @@ distribution of electromagnetic radiation according to wavelength or frequency i
 
 	
 
-\subsection{intensity}
+\subsection{wave intensity}
 
 energy can be transmitted along a wave
 
@@ -611,7 +613,7 @@ the degree to which energy is concentrated is called the intensity of the wave
 here concentration has two meanings -- concentration in time and concentration in area $S$\footnote{To avoid confusion, I reserved letter `$A$' for wave amplitude and chose `$S$' to represent an area.}
 
 \begin{ilight}
-	\keypoint{intensity} of a wave is defined as the power $P$ per unit area on a cross section $S$: $\boxed{I=\frac{P}{S}}$
+	\keypoint{intensity} of a wave is defined as the power $P$ per unit area on a cross section $S$: $\boxed{I=\frac{P}{S}}$ \index{wave intensity}
 \end{ilight}
 
 \cmt unit of wave intensity: $[I] = \text{ W m}^{-2}$
@@ -1163,15 +1165,19 @@ For the questions below, take the speed of sound to be $340 \mps$.
 }
 
 \question{
-	A girl sits on a horizontal platform that is rotating about a vertical axis. The girl moves in a circular path with a constant speed of $8.0 \mps$. The girls starts blowing a whistle which emits a sound of frequency 1200 Hz. To an observer standing at a distance, (a) find the maximum and the minimum frequency heard. (b) Describe the variation in the frequency of the sound heard by the observer.}
-
-\question{
-	A spectral line of a particular wavelength is emitted from a distant star. The wavelength observed is found to vary periodicaly from a maximum value to a minimum value and back to the maximum value. What can you say about the motion of the star?
-}
-
-\question{
 	If the motion of the source is at right angles to an observer, state and explain whether there will be a Doppler effect?
 }
+
+
+\question{
+	A girl sits on a horizontal platform that is rotating about a vertical axis. The girl moves in a circular path with a constant speed of $8.0 \mps$. The girls starts blowing a whistle which emits a sound of frequency 1200 Hz. To an observer standing at a distance, (a) find the maximum and the minimum frequency heard. (b) Describe the variation in the frequency of the sound heard by the observer.
+}
+
+\question{
+	A spectral line of a particular wavelength is emitted from a distant star. The wavelength observed is found to vary periodically from a maximum value to a minimum value and back to the maximum value. What can you say about the motion of the star?
+}
+
+
 
 \question{
 	[This question is beyond CAIE syllabus] (a) A source emits sound wave of frequency $f$. If the observer, rather than the source, is in motion, suggest whether there is any change in the apparent frequency $f^\prime$ heard by the observer. (b) If the observer is moving towards the source at a velocity of $v_o$, show that the observed frequency $f'$ is: $f' = f \frac{v+v_o}{v}$. (c) If the observer is moving away from the source, derive a similar expression for the observed frequency. 
