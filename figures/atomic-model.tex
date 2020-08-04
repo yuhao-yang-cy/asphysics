@@ -1,0 +1,38 @@
+\documentclass[a4paper,12pt,oneside]{article}
+\usepackage[usenames,svgnames]{xcolor}
+
+%\usepackage[active,tightpage]{preview}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{4pt}%
+
+\renewcommand*\rmdefault{ppl}
+
+\begin{document}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+        \foreach \dummyidx in {1,2,...,9}{
+        	\pgfmathsetmacro{\protonr}{rand*0.25}
+        	\pgfmathsetmacro{\protonangle}{rand*360}
+        	\pgfmathsetmacro{\neutronr}{rand*0.25}
+        	\pgfmathsetmacro{\neutronangle}{rand*360}
+        	\shade[ball color=red] (\protonangle:\protonr) circle (.12);
+        	\shade[ball color=blue] (\neutronangle:\neutronr) circle (.12);
+        }
+        \foreach \electronr in {1,2,4} \draw[dashed] (0,0) circle (\electronr);
+        \foreach \electronr/\electronangle in {1/40, 1/225, 2/20, 2/62, 2/109, 2/150, 2/195, 2/231, 2/270, 2/312, 2/250, 4/15, 4/78, 4/144, 4/200, 4/266, 4/315} {
+        	\shade[ball color=green] (\electronangle:\electronr) circle (.08);
+        }
+        \shade[ball color=red] (-2.5, -4.8) circle (.12);
+        \shade[ball color=blue] (0, -4.8) circle (.12);
+        \shade[ball color=green] (2.5, -4.8) circle (.08);
+        \node at (-2.5, -5.26) {proton};
+        \node at (0, -5.2) {neutron};
+        \node at (2.5, -5.15) {electron};
+\end{tikzpicture}
+\end{center}
+
+\end{document}
