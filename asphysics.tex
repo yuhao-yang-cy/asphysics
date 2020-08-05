@@ -18,10 +18,10 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{pgfplots}
-\usetikzlibrary{arrows,positioning,calc,fadings,shapes,decorations.markings}
+\usetikzlibrary{arrows, positioning, calc, fadings, shapes, snakes, decorations.markings, decorations.pathmorphing}
 \usepackage{array}
 \usepackage{anyfontsize}
-\usepackage{circuitikz}
+\usepackage[european]{circuitikz}
 \usepackage{multirow}
 \usepackage{indentfirst}
 \usepackage{stmaryrd}
@@ -42,16 +42,16 @@
 
 % % % % % % % % % %
 
-\def\includequestions{1}
+\def\includequestions{0}
 
 
 % section title style
 \titleformat{name=\section}[block]
 {\begin{center}\begin{tikzpicture}}
-	{\draw[line width=4pt, Gray!70] (0,0) rectangle (12,3.2);
-		\node at (6,2.4) {\Huge\sc\bfseries\textcolor{purple}{Chapter \thesection}};}
+	{\draw[line width=4pt, Gray!70, rounded corners] (0,0) rectangle (12.5,3.2);
+		\node at (6.25,2.4) {\Huge\sc\bfseries\textcolor{purple}{Chapter \thesection}};}
 	{0pt}
-	{\node at (6,0.9) {\huge\filright\textcolor{purple}{#1}};}[\end{tikzpicture}\end{center}]
+	{\node at (6.25,0.9) {\huge\filright\textcolor{purple}{#1}};}[\end{tikzpicture}\end{center}]
 
 % table of contents sytle
 \titlecontents{section}[9pc]
@@ -193,22 +193,24 @@
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-%\include{issues}
-%\include{physical-quantities}
-%\include{measurements}
-%\include{kinematics}
-%\include{newton-laws}
-%\include{equilibrium}
-%\include{momentum}
-%\include{work-energy}
+\include{issues}
+\include{physical-quantities}
+\include{measurements}
+\include{kinematics}
+\include{newton-laws}
+\include{equilibrium}
+\include{momentum}
+\include{work-energy}
 
 
 \include{solids}
-%\include{kinetic-model}
-%\include{waves}
-%\include{electrostatics}
-%\include{current}
-%\include{particle-physics}
+\include{fluids}
+\include{waves}
+\include{superposition}
+\include{electrical-quantities}
+\include{current}
+\include{electrostatics}
+\include{particle-physics}
 
 \newpage
 \printindex
