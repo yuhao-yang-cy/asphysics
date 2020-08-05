@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{pstricks,pst-electricfield}
+\usepackage{pstricks-add}
+\usepackage{pst-func}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{pspicture}
+\setlength\PreviewBorder{2pt}%
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+%\psset{unit=.5cm}
+\begin{pspicture*}(-3,-2)(3,2)
+\psframe*[linecolor=white](-3,-2)(3,2)
+\psElectricfield[Q={[2 -1.25 0][-2 1.25 0]},%
+linecolor=red,posArrow=.25,N=11,points=125,Pas=0.02,linewidth=.7pt]
+%\psEquipotential[Q={[-1 -1.25 0][1 1.25 0]},linecolor=blue,Vmax=36,Vmin=4,stepV=8](-2.8,-1.8)(2.8,1.8)
+%\psEquipotential[Q={[-1 -1.25 0][1 1.25 0]},linecolor=blue,Vmax=-4,Vmin=-36,stepV=8](-2.8,-1.8)(2.8,1.8)
+%\multido{\rTB=-2+0.8}{6}{\psplotImp[linecolor=blue,stepFactor=1,algebraic](-3,-2)(3,2){1/sqrt((x-1.25)^2+y^2) - 1/sqrt((x+1.25)^2+y^2)-\rTB}}
+\rput(-1.25,0){\textcolor{black}{\tiny$+$}}
+\rput(+1.25,0){\textcolor{white}{\tiny$-$}}
+\end{pspicture*}
+\end{center}
+\end{document}
