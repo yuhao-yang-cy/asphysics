@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt,oneside]{article}
+\usepackage[usenames,svgnames]{xcolor}
+
+%\usepackage[active,tightpage]{preview}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\usetikzlibrary{arrows}
+\setlength\PreviewBorder{4pt}%
+
+\renewcommand*\rmdefault{ppl}
+\tikzset{twolinecap/.style={align=center,execute at begin node=\setlength{\baselineskip}{1.5em}}}
+\tikzset{>=stealth', pil/.style={ ->, thick, shorten <=2pt, shorten >=2pt,} }
+
+\begin{document}
+\begin{center}
+\begin{tikzpicture}[scale=1.35]
+% alpha source
+\draw[ultra thick] (-3.2,0.3) --++ (-0.8,0) --++ (0,-0.6) --++ (0.8,0);
+\node[below, twolinecap] at (-3.6, -0.5) {$\alpha$-emitting\\source};
+\foreach \dummyindex in {1,2,...,75} {
+	\pgfmathsetmacro{\x}{rand*0.14-3.8}
+	\pgfmathsetmacro{\y}{rand*0.24}
+	\shade[ball color=gray] (\x,\y) circle (.06);
+}
+% alpha beams back
+\foreach \x/\y in {-0.14/-0.24, 0.18/-0.16, 0.1/0, -0.12/0.08, 0.09/0.24}
+\draw[blue] (-3.6,\y) -- (\x, \y);
+\draw[blue, ->] (-3.6, 0.16) -- (-0.05, 0.16) arc(-90:85:0.02) --++ (175:3.5);
+\draw[blue] (-3.6, -0.08) -- (-0.3, -0.08)[out=0, in=160] to (0, -0.12);
+% gold foil
+\draw[fill=Gold!40, opacity=0.9] (0,0) ++ (-0.5,1) --++ (1,1) --++ (0,-3) --++ (-1,-1) --++ (0,3);
+\node[below, twolinecap] at (0,-2.1) {gold\\foil};
+% alpha beams front
+\foreach \x/\y in {-0.14/-0.24, 0.18/-0.16, 0.1/0, -0.12/0.08, 0.09/0.24} {
+	\draw[blue, ->] (\x,\y) --++ (6, 0);
+}
+\draw[blue, ->] (0, -0.12) [out=-20, in=155] to (0.3, -0.25) --++ (-25:5);
+\end{tikzpicture}
+\end{center}
+
+\end{document}
