@@ -1,6 +1,6 @@
 \section{Work \& Energy}
 
-We have considered in the previous chapter the accumulative effect of a force over a period of time and have seen how this gives rise to the idea of impulse and momentum. In this chapter, we consider the effect of a force over a certain displacement, and you will learn how this is related to the concept of work done and energy.
+In the previous chapter, we studied the accumulative effect of a force over a period of time and have seen how this gives rise to the idea of impulse and momentum. In this chapter, we consider the effect of a force over a certain displacement, and you will learn how this is related to the concept of work done and energy.
 
 Energy is a concept central to all of physical sciences. The entire universe is made up by energy and matter. In this section we study the energy changes during various physical processes.
 
@@ -189,7 +189,7 @@ this becomes of the elastic energy stored in the body
 	\keypoint{elastic potential energy}, also called \keypoint{strain energy}, is the energy possessed by an elastic body due to deformation \index{energy!elastic potential}
 \end{ilight}
 
-this topic will be revisited in details in \S\ref{ch-springs}
+this topic will be revisited in details in \S\ref{ch-spring-energy}
 
 \subsubsection{other types of energies}
 
@@ -245,7 +245,7 @@ recall in kinematics, $a=\frac{\dd v}{\dd t}$ and $\dd s = v \dd t$, so we have
 W_\text{total} = \int_i^f m \frac{\dd v}{\dd t} v \dd t = \int_i^f m v \dd v
 \end{equation*}
 
-we are integrating over velocity from initial value $u$ to final value $v$, wo we find
+we are integrating over velocity from initial value $u$ to final value $v$, so we find
 \begin{equation*}
 W_\text{total} = \int_i^f m v \dd v = \frac{1}{2}mv^2 \Big|_u^v = \frac{1}{2}mv^2 - \frac{1}{2}mu^2
 \end{equation*}
@@ -271,9 +271,11 @@ for conservative part, let's define: $\Delta E_p = - W_{c} = - \int_i^f F_c \dd 
 
 this means work by conservative forces can be interpreted as change in its \keypoint{potential energy}
 
-let's call the sum of kinetic and potential energy of a body its \keypoint{mechanical energy}: $E_m = E_k + E_p$
+let's call the sum of an object's kinetic and potential energy its \keypoint{mechanical energy}: $E_m = E_k + E_p$
 
-work-energy theorem can then be rewritten as: $W_\text{nc} = \Delta E_k + \Delta E_p = \Delta E_m$
+work-energy theorem can then be rewritten: $\Delta E_k = W_\text{total} = W_\text{c} + W_\text{nc} = -\Delta E_p + W_\text{nc}$
+
+rearrange we have: $W_\text{nc} = \Delta E_k + \Delta E_p \RA  \boxed{W_\text{nc} = \Delta E_m}$
 
 \begin{ilight}
 	the change in mechanical energy equals the net work done by all non-conservative forces
@@ -508,7 +510,7 @@ at $v=15\mps$: $\frac{24000}{15} - 16\times15 = 800a \RA a=1.7\mpss $
 
 as car's velocity $v$ increases, driving force $F=\frac{P}{v}$ decreases, resistive force $f=\alpha v$ increases
 
-so resultant force will decrease, the car will accelerate at a decreasing acceleration
+so resultant force will decrease, the car will accelerate at a decreasing rate
 
 eventually it reaches an equilibrium state where $F=f$, the car then travels at constant speed $v_t$
 \begin{equation*}

@@ -1,8 +1,8 @@
 \section{Solids}
 
-\subsection{deformation \& elasticity}
+in this chapter, we study how a force changes the shape of an object
 
-forces can cause a change in the shape of an object
+an important notion is the elasticity of materials
 
 for \keypoint{elastic} materials, when external force is removed, it can return to its original shape
 
@@ -47,11 +47,15 @@ extension of a spring, $x = L - L_0$, is dependent on the force applied
 
 \cmt Hooke's law can be summarised by the equation: $\boxed{F=kx}$
 
-\cmt the proportionality constant $k$ is called the \keypoint{spring constant}
+\cmt the proportionality constant $k$ is called the \keypoint{spring constant}, or \keypoint{force constant}
 
 larger $k$ means a greater force is required to extend the spring by same amount
 
-a spring with a large $k$ is said to \emph{stiff}
+a spring with a large $k$ is said to be \emph{stiff}
+
+\cmt Hooke's law also holds if spring is being compressed
+
+i.e., if a spring is pushed to have compression of $x$, we still have force applied $F=kx$
 
 \cmt linear relationship between $F$ and $x$ is only true up to a certain range
 
@@ -64,7 +68,7 @@ the point beyond which spring cannot return to original length is called the \ke
 
 \begin{figure}[ht]
 	\centering
-	\begin{tikzpicture}[scale=1]
+	\begin{tikzpicture}[yscale=0.96]
 	\draw[<->] (9.6,0) node[below]{$x$} -- (0,0) -- (0,6.4) node[left]{$F$};
 	\draw[thick] (0,0) -- (3,4) [out=53.13,in=185] to (9,6); \fill (3,4) circle(0.08); \fill (4.2,5.1) circle(0.08);
 	\draw[<-] (1.8,2) -- ++(2.5,-0.8) node[note]{linear region for which \\ Hooke's law $F=kx$ holds};
@@ -87,7 +91,7 @@ the point beyond which spring cannot return to original length is called the \ke
 	\fnet = F - mg = kx - mg = ma \RA a = \frac{kx-mg}{m} = \frac{270\times5.0\times10^{-2} - 1.2 \times 9.81}{1.2} \approx 1.44 \mpss \teoe
 \end{equation*}
 
-\subsubsection{elastic potential energy in a spring}
+\subsubsection{elastic potential energy in a spring}\label{ch-spring-energy}
 
 to stretch or compress a spring, work must be done
 
@@ -136,7 +140,7 @@ so elastic potential energy stored in a spring is:
 	W = \Delta E_p = \frac{1}{2}kx_2^2 - \frac{1}{2}kx_1^2 = \frac{1}{2} \times 2000 \times (0.050^2 - 0.030^2) = 1.6 \text{ J} \teoe
 \end{equation*}
 
-\example{A trolley of 400 g can freely travel along a horizontal surface. It is pushed against a spring buffer. Suppose the spring is initially compressed by 5.0 cm under a 20 N force. When the trolley is released, it accelerates until it becomes detached. What is the trolley's final speed?}
+\example{A trolley of 400 g can travel freely along a horizontal surface. It is pushed against a spring buffer. Suppose the spring is initially compressed by 5.0 cm under a 20 N force. When the trolley is released, it accelerates until it becomes detached. What is the trolley's final speed?}
 
 \sol elastic potential energy in spring transforms into kinetic energy of trolley
 \begin{equation*}
@@ -175,7 +179,7 @@ solving the simultaneous equations, we find: $v_A \approx 1.22\mps, v_B \approx 
 
 so far we have discussed the properties of a single spring
 
-next we investigate how a set of different springs respond to a given load
+next we investigate how a set of springs respond to a given load
 
 \subsubsection*{parallel springs}
 
@@ -342,7 +346,7 @@ hence, total extension: $x = 2.0 + 3.0 + 6.0 = 11 \text{ cm}$ \eoe
 
 
 
-\subsection{stress \& strain}
+\subsection{stress, strain \& Young modulus}
 
 from daily experience, it is easier to stretch a longer wire than a shorter one
 
@@ -350,16 +354,16 @@ same tensile force also produce greater effects on a thinner material than on a 
 
 so we need better quantities to describe the amount of deformation and the amount of action
 
-to study how a material responds to a tensile force, several new quantities are to be introduced
+to study a material's response to a tensile force, several new quantities are to be introduced
 
 \subsubsection{stress \& strain}
 
 \begin{ilight}
-	\keypoint{tensile strain}\index{strain} is defined as the ratio of the extension to the natural length of a wire: $\boxed{\epsilon = \frac{x}{L}}	$
+	\centering \keypoint{tensile strain}\index{strain} is defined as the ratio of the extension of a wire to its natural length: $\boxed{\epsilon = \frac{x}{L}}	$
 \end{ilight}
 
 \begin{ilight}
-	\keypoint{tensile stress}\index{stress} is defined as the force applied per unit cross-sectional area: $\boxed{\sigma = \frac{F}{A}}$ 
+	\centering \keypoint{tensile stress}\index{stress} is defined as the force applied per unit cross-sectional area: $\boxed{\sigma = \frac{F}{A}}$ 
 \end{ilight}
 
 \cmt strain is the ratio of two lengths, so it is unit free
@@ -383,7 +387,7 @@ i.e., stress and strain should also be proportional to each other within certain
 \subsubsection{Young modulus}
 
 \begin{ilight}
-	ratio of stress to strain of a material is called the \keypoint{Young modulus}\index{Young modulus}: $ \boxed{E = \frac{\sigma}{\epsilon}}$
+	\centering ratio of stress to strain of a material is called the \keypoint{Young modulus}\index{Young modulus}: $ \boxed{E = \frac{\sigma}{\epsilon}}$
 \end{ilight}
 
 
@@ -484,9 +488,9 @@ to measure Young's modulus of a metal wire, experimental setup can be laid out a
 
 \titem record mass $m$ attached to the wire, then force applied is $F=mg$
 
-\titem extension $x$of the wire is taken to be distance moved out by the marker
+\titem extension $x$ of the wire is taken to be distance moved out by the marker
 
-this can be measured with a \emph{travelling microscope}\footnote{A travelling microscope is basically a microscope that can move back and forth along a rail. The position of the microscope can be varied by turning a screw. This position can be read off a vernier scale. So in short, a travelling microscope can be used to measure the change in length with a very high resolution (typically to a precision of 0.01mm or 0.02 mm).} or a \emph{vernier calliper}
+\phantom{\titem}this can be measured with a \emph{travelling microscope}\footnote{A travelling microscope is basically a microscope that can move back and forth along a rail. The position of the microscope can be varied by turning a screw. This position can be read off a vernier scale. So in short, a travelling microscope can be used to measure the change in length with a very high resolution (typically to a precision of 0.01mm or 0.02 mm).} or a \emph{vernier calliper}
 
 \cmt analysis of data
 

@@ -19,7 +19,7 @@ the two rules allow for analysis of complex circuits in the field of electrical 
 
 \cmt recall currents are produced by movement of electric charges
 
-so Kirchhoff's first law is therefore a consequence of conservation of electric charges
+so Kirchhoff's first law is therefore a consequence of \emph{conservation of electric charges}
 
 \begin{wrapfigure}{R}{0.45\textwidth}
 	\vspace{-21pt}
@@ -58,7 +58,7 @@ e.m.f. of a supply is electrical energy produced per unit charge
 
 p.d. across a resistor gives electrical energy consumed per unit charge
 
-so Kirchhoff's second law is a consequence of energy conservation
+so Kirchhoff's second law is a consequence of \emph{energy conservation}
 
 \cmt signs for $\mathcal{E}$ and $V$ depend on the choice of loop orientation
 
@@ -164,7 +164,7 @@ in principle, $I_1$, $I_2$ and $I_3$ can be solved from the three equations
 
 one can also apply KVL for loop $AFCBA$ to write: $\mathcal{E}_1 - \mathcal{E}_2 = I_1 R_1 - I_2 R_2$
 
-but this equation looks complex but is simply \ding{173}$-$\ding{174}, which is not an independent equation
+this equation looks complex but is simply \ding{173}$-$\ding{174}, which is not an independent equation
 
 when writing down equations using KVL, choosing simpler loops gives easier equations \eoe
 
@@ -187,9 +187,9 @@ we can derive formula for series and parallel resistors using Kirchhoff's laws
 	\caption*{three resistors in series}
 \end{figure}
 
-let's take three series resistors as shown
+take three series resistors as shown
 
-current through each is the same: $I = I_1 = I_2 = I_3$
+current through each resistor is the same: $I = I_1 = I_2 = I_3$
 
 p.d. is shared between the three resistors: $V_\text{total} = V_1 + V_2 + V_3$
 
@@ -201,7 +201,7 @@ in general, if there are $n$ resistors in series, then: $ \boxed{R_\text{total} 
 
 \cmt if one of the resistors in a series network increases, then $R_\text{total}$ would increase
 
-\cmt if adding an additional resistor to a network in series, then $R_\text{total}$ would increase
+\cmt adding an additional resistor to a network in series, then $R_\text{total}$ would increase
 
 \cmt if $n$ identical resistors $R_0$ are connected in series, then $R_\text{total}  = nR_0$
 
@@ -247,13 +247,13 @@ in general, for $n$ resistors in parallel:
 
 \cmt if one of the resistors in a parallel network increases, then $R_\text{total}$ would increase
 
-\cmt if adding an additional resistor to a network in parallel, then $R_\text{total}$ would decrease
+\cmt adding an additional resistor to a network in parallel, then $R_\text{total}$ would decrease
 
 \cmt if $n$ identical resistors $R_0$ are connected in parallel, then $R_\text{total}  = \frac{1}{n}R_0$
 
 
-\begin{wrapfigure}{r}{0.48\textwidth}
-	\vspace*{-18pt}
+\begin{wrapfigure}{r}{0.45\textwidth}
+	\vspace*{-20pt}
 	\centering
 	\begin{circuitikz}[scale=0.8]
 		\draw (3,1) to [R,l_=$R_1$] (0,1) -- (0,4) to [battery,l=$\mathcal{E}$] (7,4) -- (7,1) -- (6.5,1);
@@ -263,7 +263,7 @@ in general, for $n$ resistors in parallel:
 	\vspace*{-16pt}
 \end{wrapfigure}
 
-\example{In the circuit shown, the battery has an e.m.f. $\mathcal{E}=18$ V, and the resistors have $R_1=6.0$ $\Omega$, $R_2=4.0$ $\Omega$ and $R_3=12$ $\Omega$. (a) Find the combined resistance of all external resistors. (b) Find the current through the battery? (c) Find the p.d. across $R_1$, $R_2$ and $R_3$. (d) Find the power dissipated in $R_2$ and $R_3$.}
+\example{In the circuit shown, the battery has an e.m.f. $\mathcal{E}=18$ V, and the resistors have $R_1=6.0$ $\Omega$, $R_2=4.0$ $\Omega$ and $R_3=12$ $\Omega$. (a) Find the total resistance of all external resistors. (b) Find the current through the battery. (c) Find the p.d. across $R_1$, $R_2$ and $R_3$. (d) Find the total power dissipated in $R_2$ and $R_3$.}
 
 \sol total resistance: $R = R_1 + \left( \frac{1}{R_2} + \frac{1}{R_2} \right)^{-1} = 6.0 + \left( \frac{1}{4.0} + \frac{1}{12} \right)^{-1} = 6.0 + 3.0 = 9.0 \text{ } \Omega$
 
@@ -327,7 +327,7 @@ this is because some voltage is lost due to internal resistance
 	
 	though this current is limited to some finite value, this still causes great heating effects
 	
-	this should be avoided because battery may be destroyed if temperature becomes too high
+	this should be avoided because battery may be destroyed if temperature gets too high
 	
 	\item[--] battery drives no current for an open circuit, i.e., $I \to 0$ if external resistance $R \to \infty$
 	
@@ -352,7 +352,7 @@ terminal p.d.: $V_R = IR = 5.0 \times 3.50 = 17.5 \text{ V}$
 
 power of motor: $P_R = IV_R = 5.0 \times 17.5 = 87.5 \text{ W} \, \text{  or }\, P_R = I^2 R = 5.0^2 \times 3.50 = 87.5 \text{ W}$ \eoe
 
-\example{A battery of e.m.f. $12$ V is connected to an external network of total resistance of 22 $\Omega$. The current through the battery is $0.50$ A. Find (a) the internal resistance of the battery, (b) the total power produced by battery, (c) the power dissipated in battery.}
+\example{A battery of e.m.f. $12$ V is connected to a network of total resistance of 22 $\Omega$. The current through the battery is $0.50$ A. Find (a) the internal resistance of the battery, (b) the total power produced by battery, (c) the power dissipated in battery.}
 
 \sol lost volts: $V_r = \mathcal{E} - IR = 12 - 0.50 \times 22 = 1.0 \text{ V}$
 
@@ -362,7 +362,7 @@ power produced by battery: $P_\text{total} = I\mathcal{E} = 0.50 \times 12 = 6.0
 
 power dissipated in battery: $P_r = I V_r = 0.50 \times 1.0 = 0.50 \text{ W} \, \text{  or }\, P_r = I^2 r = 0.50^2 \times 2.0 = 0.50 \text{ W}$ \eoe
 
-\example{An electric heater is operating at a working p.d. of 200 V and a current of 5.0 A is driven by a voltage source of 230 V. The source has an internal resistance of 4.0 $\Omega$ and the resistance of the connecting wires is not negligible. Find (a) the lost volts in the source, (b) the resistance of the wires, (c) the useful power from the source, (d) the efficiency of this circuit.}
+\example{An electric heater is operating at a working p.d. of 200 V. A current of 5.0 A is driven by a voltage source of 230 V. The source has an internal resistance of 4.0 $\Omega$ and the resistance of the connecting wires is not negligible. Find (a) the lost volts in the source, (b) the resistance of the wires, (c) the useful power from the source, (d) the efficiency of this circuit.}
 
 \sol lost volts: $V_r = I r = 5.0 \times 4.0 = 20 \text{ V}$
 
@@ -408,8 +408,8 @@ the diagram below show how $P_\text{out}$ varies with $R$
 	\draw [thick,blue,domain=0:8.4,samples=30,smooth,variable=\x] plot (\x, {16*\x/(\x+1)^2});
 	\draw [dashed] (0,4) node[left]{$P_\tmax=\frac{\mathcal{E}^2}{4r}$} -- (1,4) -- (1,0) node[below]{$r$};
 	\draw [->] (2,4.4) node[above right,note]{maximum power output when $R=r$} -- (1.2,4.1);
-	\draw [->] (7,3.0) node[note]{$P_\text{out}$ decreases as current\\ decreases with load $R$.} -- (7,2.0);
-	\draw [->] (4.5,0.8) node[note]{low $P_\text{out}$ for small external load $R$ \\ as large fraction of e.m.f. is lost on $r$.} -- (0.3,0.8);
+	\draw [->] (7,3.0) node[note]{$P_\text{out}$ decreases as current\\ decreases with load $R$} -- (7,2.0);
+	\draw [->] (4.5,0.8) node[note]{low $P_\text{out}$ for small external load $R$ \\ as large fraction of e.m.f. is lost on $r$} -- (0.3,0.8);
 	\end{tikzpicture}
 	\caption*{variation of output power $P_\text{out}$ from a power supply to an external resistor $R$}
 \end{figure}
@@ -587,7 +587,7 @@ so voltage reading ranges from 0 to 12.5 V \eoe
 
 
 \emph{bridge circuits} can be designed by altering the potential divider circuit
-\footnote{The bridge circuit we will be looking at is known as the\emph{Wheatstone bridge}. The circuit design was invented by British scientist \emph{Samuel Hunter Christie} in 1833 and later improved by another British scientist \emph{Charles Wheatstone} in 1843.}
+\footnote{The bridge circuit we will be looking at is known as the \emph{Wheatstone bridge}. The circuit design was invented by British scientist \emph{Samuel Hunter Christie} in 1833 and later improved by another British scientist \emph{Charles Wheatstone} in 1843.}
 
 by balancing two legs of a bridge circuit, an unknown resistance can be measured
 
@@ -645,11 +645,11 @@ so resistance of $R_x$ can be determined to great accuracy
 
 \example{Four resistors are connected to a battery as shown. (a) If the variable resistor $R_4$ is adjusted to have a resistance of 35 $\Omega$, what is the reading on the voltmeter? (b) If the voltmeter reads zero, what is the resistance for $R_4$?}
 
-\sol (a) p.d. across $R_2$: $V_2 = \frac{20}{20+10}\times24 = 16.0 \text{ V}$
+\sol (a) p.d. across $R_1$: $V_1 = \frac{10}{20+10}\times24 = 8.0 \text{ V}$
 
-\eqyskip\hspace*{1.2em} p.d. across $R_4$: $V_4 = \frac{35}{35+25}\times24 = 14.0 \text{ V}$
+\eqyskip\hspace*{1.2em} p.d. across $R_3$: $V_3 = \frac{25}{35+25}\times24 = 10.0 \text{ V}$
 
-\eqyskip\hspace*{1.2em} voltmeter reading: $V = V_2 - V_4 = 16.0 -14.0 = 2.0 \text{ V}$
+\eqyskip\hspace*{1.2em} voltmeter reading: $V = V_3 - V_1 = 10.0 -8.0 = 2.0 \text{ V}$
 
 (b) $V=0$ means p.d. share between $R_1$ and $R_2$ is same as p.d. share between $R_3$ and $R_4$
 \begin{equation*}

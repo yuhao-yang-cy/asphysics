@@ -2,7 +2,7 @@
 
 \subsection{electrical quantities}
 
-\subsubsection{electric charges}
+\subsubsection{electric charges}\index{charge}
 
 electric charge is the property of matter that causes it to experience a force in an electric field
 
@@ -29,7 +29,7 @@ each electron has a charge of $-e$, where $e=1.60\times10^{-19}\text{ C}$ is the
 
 \cmt an object can only lose or gain a whole number of electrons
 
-charge of any object must be an integer multiple of the elementary charge: $Q=Ne$
+charge of any object must be an integer multiple of the elementary charge: $\boxed{Q=Ne}$
 
 we say the charge of an object is \keypoint{quantised}
 
@@ -53,7 +53,7 @@ number of lost electrons: $ N = \frac{Q}{e} = \frac{2.4\times10^{-9}}{1.60 \time
 flow of electric charges gives rise to electric currents
 
 \begin{ilight}
-	\keypoint{electric current} $I$ is defined as the amount of charge flow $Q$ per unit time: $ \boxed{I=\frac{\Delta Q}{\Delta t}} $\index{current}
+	\centering \keypoint{electric current} $I$ is defined as the amount of charge flow $Q$ per unit time: $ \boxed{I=\frac{\Delta Q}{\Delta t}} $\index{current}
 \end{ilight}
 
 
@@ -118,7 +118,7 @@ let's take cross section $A$ of a material, and see what determines the electric
 
 \begin{figure}[ht]
 	\centering
-	\begin{tikzpicture}[scale=1]
+	\begin{tikzpicture}[scale=0.95]
 	\draw[fill=orange!40, opacity=0.4] (5,-1) arc(-90:90:0.5 and 1) -- (2,1) arc(90:270:0.5 and 1) -- (5,-1);
 	\draw[thick] (0,0) ellipse (0.5 and 1) node {$A$};
 	\draw[dashed] (2,0) ellipse (0.5 and 1);
@@ -161,7 +161,7 @@ good conductors have large $n$, while semiconductors have smaller $n$
 v = \frac{I}{nAe} = \frac{I}{n\cdot\frac{1}{4} \pi d^2 \cdot e} = \frac{2.0}{5.9\times10^{28} \times \frac{1}{4}\pi \times (1.2\times10^{-3})^2\times1.60\times10^{-19}} \approx 1.9\times10^{-4} \mps
 \end{equation*}
 
-this calculation shows that each free electron actually travel at very low speeds in a wire \eoe
+\eqyskip this calculation shows that each free electron actually travel at very low speeds in a wire \eoe
 
 \example{A metal conductor and a piece of semi-conductor of the same cross section are connected in series. When an electric current is driven through them, compare the mean drift speed of the charge carriers in the two materials.}
 
@@ -212,7 +212,7 @@ current always flows from a higher potential to a lower potential
 
 \example{A fully-charged 12 V car battery can supply a total electrical energy of 0.90 MJ. The starter motor of the car requires an average current of 150 A for a period of 2.0s. The battery is not able to recharge due to a fault. How many times can the starter motor be used?}
 
-\sol total charge can be supplied: $Q_\text{total} = \frac{W}{\mathcal{E}} = \frac{0.90 \times 10^6}{12} = 75000 \text{ C}$
+\sol total charge that can be supplied: $Q_\text{total} = \frac{W}{\mathcal{E}} = \frac{0.90 \times 10^6}{12} = 75000 \text{ C}$
 
 charge needed for each start: $Q = I t = 150 \times 2.0 = 300 \text{ C}$
 
@@ -278,7 +278,7 @@ R = \frac{\rho L}{A} \RA L = \frac{RA}{\rho} = \frac{2200 \times \pi \times (0.1
 
 \vspace*{0.3em} resistance: $R = \frac{\rho L}{A} \propto \frac{L}{A} \RA \frac{R'}{R}  = \frac{L'}{L} \times \frac{A}{A'} = 2 \times 2 \RA R' = 4R $ \eoe
 
-\subsubsection{electrical power}
+\subsubsection{electrical power}\index{power}
 
 current flowing through any electrical component transforms electrical energy into other forms
 
@@ -287,7 +287,7 @@ rate at which electrical energy is transferred, or electrical power, is computed
 P = \frac{\Delta W}{\Delta  t} \xlongequal{V=\frac{W}{Q}} \frac{\Delta Q \cdot V}{\Delta t} \xLongrightarrow{I = \frac{\Delta Q}{\Delta t}} \boxed{P=IV}
 \end{equation*}
 
-substituting $V=IR$, formula for electrical power also takes two alternative forms
+substituting $V=IR$, formula for electrical power also takes two useful forms
 \begin{equation*}
 \boxed{P=I^2 R} \quad \text{or} \quad \boxed{P=\frac{V^2}{R}}
 \end{equation*}
@@ -306,7 +306,7 @@ if a p.d. of 1 V drives a current of 1 A, power produced is 1 W, i.e., $1 \text{
 
 
 
-\example{An electric toaster is labelled `220V 900 W'. When it is working normally, find (a) the current through it, (b) the resistance in the toaster.}
+\example{An electric toaster is labelled `220 V 900 W'. When it is operating normally, find (a) the current through it, (b) the resistance in the toaster.}
 
 \sol current: $I = \frac{P}{V} = \frac{900}{220} \RA I \approx 4.09 \text{ A}$
 
@@ -342,7 +342,7 @@ the behaviours can be shown in an $I$-$V$ characteristics graph
 
 resistance of an ohmic conductor is constant for all currents
 
-so current is directly proportional to p.d.
+so current is directly proportional to p.d.\index{Ohm's law}
 
 
 \cmt metals wires are usually considered as ohmic conductors
@@ -427,7 +427,7 @@ at greater currents, current increases more for same p.d. increase
 \vspace*{-16pt}
 \end{wrapfigure}
 
-\keypoint{diode} is only allows current to pass in one direction
+\keypoint{diode} only allows current to pass in one direction\index{diode}
 
 \cmt when an \emph{ideal} diode is forward-biased, $R_D \to 0$
 
