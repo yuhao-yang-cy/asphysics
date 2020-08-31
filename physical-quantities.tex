@@ -31,9 +31,11 @@ the seven\footnote{Luminous intensity is beyond the scope of the AS-Level syllab
 
 all other quantities are derived from the base units
 
+\newpage
+
 \example{Give the SI base units of (a) speed, (b) acceleration, (c) force, (d) work done.}
 
-	$\text{speed} = \frac{\text{distance}}{\text{time}} \RA [v] = \frac{[s]}{[t]} = \frac{\text{m}}{\text{s}} = \text{m s}^{-1}$
+\sol $\text{speed} = \frac{\text{distance}}{\text{time}} \RA [v] = \frac{[s]}{[t]} = \frac{\text{m}}{\text{s}} = \text{m s}^{-1}$
 	
 	$\text{acceleration} = \frac{\text{speed}}{\text{time}} \RA [a] = \frac{[v]}{[t]} = \frac{\text{m s}^{-1}}{\text{s}} = \text{m s}^{-2}$ 
 
@@ -73,7 +75,9 @@ prefixes are used to indicate multiples and sub-multiples of original units
 \subsubsection{dimensional analysis}
 
 \begin{ilight}
-	if an equation is correct, then the units on both sides must be the same. Such an equation with consistent units is said to be \keypoint{homogeneous}.
+	if an equation is correct, then the units on both sides must be the same
+	
+	such an equation with consistent units is said to be \keypoint{homogeneous}.
 \end{ilight}
 
 \emph{dimensional analysis} is widely used as a rough guide to check for the correctness of equations\index{dimensional analysis}
@@ -220,7 +224,7 @@ to deal with vector sums, we need take the directions of vectors into account
 
 let's consider the sum of two vectors $\overrightarrow{p_1}$ and $\overrightarrow{p_2}$
 
-resultant vector $\overrightarrow{p} = \overrightarrow{p_1} + \overrightarrow{p_2}$ lies on the diagonal of the parallelogram subtended by $\overrightarrow{p_1}$ and $\overrightarrow{p_2}$
+resultant vector $\overrightarrow{p} = \overrightarrow{p_1} + \overrightarrow{p_2}$ lies on diagonal of the parallelogram subtended by $\overrightarrow{p_1}$ and $\overrightarrow{p_2}$
 
 this is called the \keypoint{parallelogram rule} for vector addition
 
@@ -286,11 +290,11 @@ if the resultant of several vectors $\overrightarrow{p} = \overrightarrow{p_1} +
 \begin{compactitem}
 	\item[(a)] magnitude of resultant velocity: $v = \sqrt{v_b^2 + v_w^2} = \sqrt{5.0^2 +2.0^2} \approx 5.4 \mps$
 	
-	in this case, the boat reaches the opposite bank in shortest time but will drift downstream
+	in this case, the boat reaches opposite bank in shortest time but will drift downstream
 	
 	\item[(b)] magnitude of resultant velocity: $v = \sqrt{v_b^2 + v_w^2} = \sqrt{5.0^2 -2.0^2} \approx 4.6 \mps$
 	
-	in this case, the boat reaches the opposite bank in shortest distance
+	in this case, the boat reaches opposite bank in shortest distance
 	
 	but the boat is headed slightly upstream: $\theta = \sin^{-1} \frac{v_w}{v_b} = \sin^{-1}\frac{2.0}{5.0} \approx 24^\circ$ \eoe
 \end{compactitem}
@@ -337,6 +341,7 @@ if $\overrightarrow{p}$ forms an angle $\theta$ to the $x$-axis, then:
 	
 }
 
+\newpage
 
 \example{A force of 3.0 N towards east and a force of 2.0 N towards 30$^\circ$ north of east act on an object. Find the magnitude and the direction of the resultant force.}
 
@@ -352,6 +357,8 @@ one can draw a \emph{scale diagram} with a ruler and a protractor as shown
 	\draw[thick,->] (0,0) -- ++ (30:2) node[midway,above,rotate=30]{2.0 N};
 	\draw[dashed] (30:2) --++ (3,0) --++ (-150:2);
 	\draw[thick,blue,->] (0,0) -- (4.732,1) node[midway, above]{$\overrightarrow{F}$};
+	\draw (1,0) arc(0:11.9:1);
+	\node at (1.135, 0.12) {$\theta$};
 	\end{tikzpicture}
 \end{figure}
 
@@ -409,332 +416,7 @@ component of weight normal to slope: $W_\perp = W\cos\theta = 20.0\times \cos30^
 
 
  
-\subsection{uncertainties}
- 
-physics is a practical science, any law of physics must be evidenced by experimental facts
 
-any meaningful physical quantity is measured either directly or indirectly
-
-but repeated readings may not give a consistent value, instead they show a \emph{spread} of data
-
-\keypoint{uncertainty} gives the \emph{range} of values in which \emph{true value} of the measurement is asserted to lie
-
-measurement of a particular quantity is usually reported as $x \pm \Delta x$, where reported value $x$ is the average of repeated readings, and $\Delta x$ is its uncertainty
-
-\subsubsection{absolute uncertainty}
-
-$\Delta x$ measures the size of the range of values where true value probably lies
-
-therefore $\Delta x$ is called the \keypoint{absolute uncertainty}\index{uncertainty!absolute uncertainty}
-
-\cmt absolute uncertainty $\Delta x$ carries the same unit as quantity $x$
-
-\cmt absolute uncertainty can be worked out from \emph{range} of readings
-
-range of a data set ${x_1, x_2, x_3, \cdots}$ is the difference between greatest and smallest value
-
-absolute uncertainty is given by: $\boxed{\Delta x = \frac{1}{2}\left(x_\tmax-x_\tmin\right)}$
-
-\cmt absolute uncertainty is usually kept to one significant figure only
-\footnote{In some cases where the uncertainty of a quantity is not stated explicitly, the uncertainty is indicated by the number of significant figures in the stated value. If the height of a person is measured to be 1.75 m, this means the first two digits (1 and 7) are certain, while the last digit (5) is uncertain.
-	
-When you add or subtract numbers, the number of significant figures is determined by the location of the decimal place. For example, $1.11+\underline{4.2}+0.563=5.873$, the result should be written as $5.9$. When you multiply or divided numbers, the result can have no more significant figures than the term with the fewest significant figures. For example, $1.35\times462\times\underline{0.27} = 168.399$, the result should be written as 170.
-
-However, in AS \& A-Level physics, apart from the problems regarding uncertainties, it is allowed to give one more significant figure that what is required. So in other sections of my notes where we do not keep track of the uncertainties, I could be a bit sloppy with the issue of significant figures when numerical values are worked out.}
-
-since $\Delta x$ indicates where the readings start to get problematic
-
-measured quantity $x$ is kept to the same decimal place as $\Delta x$
-
-for example, if value for the speed of an athlete is found to be $v=(8.16\pm0.27)\mps$, the result, to an appropriate number of significant figures, should be kept as: $v=(8.2\pm0.3) \mps$.
-
-
-
-\subsubsection{fractional \& percentage uncertainty}
-
-ratio of absolute uncertainty to reported value, i.e., $\frac{\Delta x}{x}$, gives the \keypoint{fractional uncertainty}
-
-recording this ratio as a percentage number, this is known as the \keypoint{percentage uncertainty}\index{uncertainty!percentage uncertainty}
-
-\cmt fractional and percentage uncertainty have no unit
-
-\cmt $\frac{\Delta x}{x}$ gives relative measure of spread of data, so it is also called the relative uncertainty
-
-\example{A students measures the diameter of a cylindrical bottle with a vernier calliper. The measurements are taken from several different positions and along different directions. The readings she obtained are: 4.351 cm, 4.387 cm, 4.382 cm, 4.372 cm, 4.363 cm. What is the percentage uncertainty of her measurements?}
-
-\sol average value: $d = \frac{1}{5}(4.351+4.387+4.382+4.372+4.363) = 4.371 \text{ cm}$
-
-absolute uncertainty: $\Delta d = \frac{1}{2}\left(d_\tmax-d_\tmin\right) = \frac{1}{2}(4.387-4.351) = 0.036 \text{ cm}$
-
-result of measurement should be recorded as: $ d = 4.37 \pm 0.04 \text{ cm}$
-
-percentage uncertainty: $\frac{\Delta d}{d} = \frac{0.036}{4.371} \approx 0.082\%$   \eoe
-
-
-
-
-\subsubsection{propagation of uncertainties}\index{uncertainty!propagation}
-
-in many situations, the quantity that we want to find cannot be measured directly
-
-the quantity of interest has to be computed from other quantities
-
-uncertainty of this calculated quantity would depend on two things:
-
-\titem uncertainties of the raw data from which it is calculated,
-
-\titem how calculated quantity is related to those original quantities
-
-\vspace*{\baselineskip}
-
-suppose quantities $A$ and $B$ are two measurables with uncertainty $\Delta A$ and $\Delta B$ 
-
-$X$ is a quantity to be computed by taking their sum, difference, product or quotient
-
-to evaluate uncertainty in $X$, we estimate the worst scenario, i.e., the greatest deviation from its reported value
-
-\subsubsection*{addition: $S=A+B$}
-
-$S_\tmax = A_\tmax + B_\tmax = (A + \Delta A) + (B + \Delta B) = (A+B) + (\Delta A + \Delta B)= S + (\Delta A + \Delta B) \RA \boxed{\Delta S = \Delta A + \Delta B}$
-
-\subsubsection*{subtraction: $D=A-B$}
-
-$D_\tmax = A_\tmax - B_\tmin = (A + \Delta A) - (B - \Delta B) = (A-B) + (\Delta A + \Delta B)= D + (\Delta A + \Delta B) \RA \boxed{\Delta D = \Delta A + \Delta B}$
-
-\subsubsection*{multiplication: $P=AB$}
-
-$P_\tmax = A_\tmax B_\tmax = (A + \Delta A)(B + \Delta B) = AB + B\Delta A + A\Delta B + \Delta A \Delta B \RA \Delta P =  B\Delta A + A\Delta B + \Delta A \Delta B$
-
-divide both sides by $P=AB$, we get
-\begin{equation*}
-\frac{\Delta P}{P} = \frac{\Delta A}{A} + \frac{\Delta B}{B} + \frac{\Delta A}{A}\cdot\frac{\Delta B}{B} \RA \boxed{\frac{\Delta P}{P} = \frac{\Delta A}{A} + \frac{\Delta B}{B}}
-\end{equation*}
-
-percentage uncertainty of a measurable is usually a few percent, so $\frac{\Delta A}{A}\cdot\frac{\Delta B}{B} \approx 0$
-
-so this piece is dropped from the last expression
-
-\subsubsection*{division: $Q=\frac{A}{B}$}
-
-one can show that $\boxed{\frac{\Delta Q}{Q} = \frac{\Delta A}{A} + \frac{\Delta B}{B}}$
-
-the derivation is left as an exercise for the reader
-
-\subsubsection*{power \& roots: $Q=A^l B^m C^n\cdots$}
-
-percentage uncertainty in $Q$ is: $\frac{\Delta Q}{Q} = l\frac{\Delta A}{A} + m\frac{\Delta B}{B} + n\frac{\Delta C}{C} +\cdots$
-
-this can be thought of as a generalization for multiplication and division operations
-
-the proof is also left as an exercise to the reader
-
-\subsubsection*{brief summary}
-
-\begin{ilight}
-	-- for addition and subtraction, \emph{absolute uncertainties} add up
-	
-	-- for multiplication, division and powers, \emph{percentage uncertainties} add up
-	
-\end{ilight}
-
-\cmt notice that uncertainties always add
-
-\example{The resistance of a resistor is measured in an experiment. The current through the resistor is $1.8\pm0.1$ A and the potential difference across is $7.5\pm 0.2$ V. What is the resistance of the resistor and its uncertainty?}
-
-value of resistance: $R=\frac{V}{I} = \frac{7.5}{1.8} \approx 4.17  \text{ }\Omega$
-
-percentage uncertainty in resistance: $\frac{\Delta R}{R} = \frac{\Delta V}{V} + \frac{\Delta I}{I} = \frac{0.2}{7.5} + \frac{0.1}{1.8} \approx 8.2 \%$
-
-absolute uncertainty in resistance: $\Delta R = 8.2\% \times 4.17 \approx 0.34 \text{ }\Omega$
-
-so we find resistance of the resistor: $R = 4.2 \pm 0.3  \text{ }\Omega$ \eoe
-
-\example{The density of a liquid is found by measuring its mass and its volume. The following is a summary of the measurements: $\text{mass of empty beaker} = (20\pm1)\text{g}$, $\text{mass of beaker and liquid} = (100\pm1)\text{g}$,  and $\text{volume of liquid} = (10.0\pm0.5)\text{cm}^3$. What is the density of this liquid and the uncertainty in this value?}
-
-\sol mass of liquid: $m = m_2 - m_1 = 100 -20 = 80 \text{ g}$
-
-uncertainty in mass: $\Delta m = \Delta m_2 + \Delta m_1 = 1 + 1 = 2 \text{ g}$
-
-density of liquid: $\rho = \frac{m}{V} = \frac{80}{10.0} = 8.00 \text{ g cm}^{-3}$
-
-percentage uncertainty in density: $\frac{\Delta \rho}{\rho} = \frac{\Delta m}{m} + \frac{\Delta V}{V} = \frac{2}{80} + \frac{0.5}{10.0} = 7.5 \%$
-
-absolute uncertainty in density: $\Delta \rho = 7.5\% \times 8.00 = 0.60 \text{ g cm}^{-3}$
-
-so density of this liquid is recorded as: $\rho = 8.0 \pm 0.6 \text{ g cm}^{-3}$ \eoe
-
-\example{The period of simple pendulum is given by $T=2\pi\sqrt{\frac{L}{g}}$. In an experiment, the length of string is measured to be $L=100.0\pm0.5$ cm, and the time taken for 10 full oscillations is $t=20.0\pm 0.2$ s. What is the value for acceleration of free fall $g$ and its uncertainty?}
-
-\sol period of one oscillation: $T = \frac{1}{10}t = 2.00 \pm 0.02 \text{ s}$
-
-let's rearrange $T=2\pi\sqrt{\frac{L}{g}}$ into $g = \frac{4\pi^2L}{T^2}$
-
-acceleration of free fall: $g = \frac{4\pi^2 \times 100.0}{2.00^2} \approx 987 \text{ cm s}^{-2}$
-
-\eqyskip percentage uncertainty: $\frac{\Delta g}{g} = \frac{\Delta L}{L} + 2\frac{\Delta T}{T} = \frac{0.5}{100.0} + 2\times\frac{0.02}{2.00} = 2.5\%$ \footnote{Starting from the formula $T=2\pi\sqrt{\frac{L}{g}}$, it is attempting to write $\frac{\Delta T}{T} = \frac{1}{2}\frac{\Delta L}{L} + \frac{1}{2}\frac{\Delta g}{g}$. But this would mean that $T$ is a calculated quantity whose uncertainty is determined by the uncertainty in $L$ and the uncertainty in $g$, which is incorrect. The right way to do it is to rearrange the formula so that calculated quantity of interest is made the subject of the working equation, the propagation of uncertainties then becomes explicit.}
-
-absolute uncertainty: $\Delta g = 2.5\% \times 987 \approx 24.7 \text{ cm s}^{-2}$
-
-so result of this measurement is: $ g = 990 \pm 20 \text{ cm s}^{-2}$ \eoe
-
-
-
-
-\subsection{measurement errors}
-
-difference between the measured value and the true value is called \keypoint{error}
-
-total error is usually a combination of two components: systematic error and random error
-
-\subsubsection{systematic \& random errors}
-
-\begin{ilight}
-	\keypoint{systematic errors} cause the readings to be greater or smaller than the true value by the same amount\index{systematic error}
-\end{ilight}
-
-\cmt faulty equipments, biased observers, calibration errors could produce systematic errors
-
-examples of systematic errors include:
-
-\titem a vernier calliper does not read zero when fully closed, this introduces \keypoint{zero error}
-
-\titem one always reads a measuring cylinder from a higher angle, this introduces \keypoint{parallax error}
-
-\titem spring of force meter becomes weaker over time, so force meter always gives overestimates
-
-\cmt systematic errors can be reduced by using better equipments or methods
-
-\titem one can check for zero error before taking readings with a micrometer
-
-\titem one can \emph{calibrate} a balance with a known mass before using it to measure mass of an object
-
-
-
-\begin{ilight}
-	\keypoint{random errors} cause the readings to fluctuate above or below the actual value\index{random error}
-\end{ilight}
-
-
-\cmt deviations caused by random error are unpredictable
-
-\cmt insensitive equipments, lack of observer precision, changes in environment, imprecise definitions could produce random errors
-
-examples of causes of random errors include:
-
-\titem \keypoint{human reaction errors} when measuring a time quantity on a stop-watch
-
-\titem electronic noise due to thermal vibrations of atoms when measuring an electric current
-
-\titem when measuring length of a crack, different people could pick different end points
-
-\cmt random errors can be reduced by averaging the results from repeated measurements
-
-for example, diameter of a sphere can be measured along different directions and averaged
-
-\cmt random errors can also be reduced by using better equipment and better technique
-
-for example, time for an object to fall can be measured with a light gate, instead of a stopwatch
-
-\begin{wrapfigure}{r}{0.5\textwidth}
-	\centering
-	\vspace*{-15pt}
-	\begin{tikzpicture}[xscale=1,yscale=0.9]
-	\draw[<->] (0,5) node[left]{$I$} -- (0,0) -- (6,0) node[below]{$V$};
-	\node[blue] at (1.5,0.4) {$\times$};
-	\node[blue] at (2.5,1.6) {$\times$};
-	\node[blue] at (3.6,2.3) {$\times$};
-	\node[blue] at (4.8,3.4) {$\times$};
-	\node[blue] at (5.6,4.7) {$\times$};
-	\draw[thick,red] (0.5,-0.4) --++ (5.5,5.2);
-	\end{tikzpicture}
-	\vspace*{-15pt}
-\end{wrapfigure}
-
-\example{An experiment is carried out to measure the resistance of a metallic resistor, which is known to be constant throughout the experiment. A set of readings for voltage $V$ across the resistor and the corresponding current $I$ are obtained. A graph of $I$ against $V$ is plotted as shown. What can you say about the errors of the experiment?}
-
-\sol one can first draw a \emph{best fit line} to see the distribution of data points
-
-constant resistance means $I$ should be directly proportional to $V$
-
-so the best fit should be a straight line through the origin
-
-but the best fit does not pass through origin, so there exists systematic error
-
-also data points scatter above and below the best fit, so random errors are present \eoe
-
-
-\subsubsection{accuracy \& precision}
-
-to analyse the result of an experiment, two important aspects are accuracy and precision
-
-\begin{ilight}
-	measurement is said to be \keypoint{accurate} if the result is close to the true value\index{accuracy}
-\end{ilight}
-
-\begin{ilight}
-	measurement is said to be \keypoint{precise} if repeated readings are close to each other\index{precision}
-\end{ilight}
-
-\begin{figure}[htp]
-	\centering
-	\begin{minipage}{0.32\textwidth}
-		\centering
-		\begin{tikzpicture}[scale = .75]
-		\draw [thick, <->] (4.5,0) node[below]{readings} -- (0,0) --(0,3) node[above]{frequency};
-		\draw [thick,blue,domain=0:4,samples=40,smooth,variable=\x] plot (\x, {2.8*exp(-30*(\x-2)^2)});
-		\draw[dashed] (2,3) -- (2,0) node[below,align=center,execute at begin node=\setlength{\baselineskip}{1.2em}]{true\\value};
-		\end{tikzpicture}
-		
-		(a) precise and accurate
-	\end{minipage}\hfil
-	\begin{minipage}{0.32\textwidth}
-		\centering
-		\begin{tikzpicture}[scale = .75]
-		\draw [thick, <->] (4.5,0) node[below]{readings} -- (0,0) --(0,3) node[above]{frequency};
-		\draw [thick,blue,domain=0:4,samples=40,smooth,variable=\x] plot (\x, {2.8*exp(-30*(\x-1.2)^2)});
-		\draw[dashed] (2,3) -- (2,0) node[below,align=center,execute at begin node=\setlength{\baselineskip}{1.2em}]{true\\value};
-		\end{tikzpicture}
-		
-		(b) precise but not accurate
-	\end{minipage}\hfil
-	\begin{minipage}{0.32\textwidth}
-		\centering
-		\begin{tikzpicture}[scale = .75]
-		\draw [thick, <->] (4.5,0) node[below]{readings} -- (0,0) --(0,3) node[above]{frequency};
-		\draw [thick,blue,domain=0:4,samples=30,smooth,variable=\x] plot (\x, {1.2*exp(-1*(\x-2)^2)});
-		\draw[dashed] (2,3) -- (2,0) node[below,align=center,execute at begin node=\setlength{\baselineskip}{1.2em}]{true\\value};
-		\end{tikzpicture}
-		
-		(c) accurate but not precise
-	\end{minipage}
-	
-	\caption*{distribution of readings with different precision and accuracy}
-\end{figure}
-
-\cmt accuracy of a measurement is closely related to systematic errors
-
-large systematic errors mean the results must be inaccurate
-
-\cmt precision of a measurement is closely related to random errors
-
-large random errors cause repeated readings to spread, so the result must be imprecise
-
-\cmt precision is usually indicated by the percentage uncertainty of the measurement
-
-similarly, precision is also indicated by the number of significant figures in a measurement
-
-for example, metre rule has a precision of 0.1 cm, while micrometer has a precision of 0.001 cm
-
-
-\example{The value for the acceleration of free fall is determined in an experiment. The result is reported to be $g=14\pm5 \mpss$. Is this result accurate? Is it precise?}
-
-\sol true value for $g$ is around $9.8\mpss$
-
-stated value is not close to the true value, so the result is not accurate
-
-percentage uncertainty in this result is $\frac{5}{14}\approx 36\%$, which is quite large
-
-so the result is not precise either \eoe
 
 
 
@@ -762,16 +444,6 @@ so the result is not precise either \eoe
 \question{An aircraft, which has a speed of $35 \mps$ in still air, is flying from south to north at a speed of $32 \mps$ with respect to a stationary observer on the ground. Find the magnitude and the possible directions of wind velocity.}
 
 \question{Three forces of 5.0 N, 12 N and 13 N act at one point on an object. The angles at which the forces act can vary. What is the maximum and the minimum resultant force?}
-
-\subsubsection*{propagation of uncertainties}
-
-\question{A thermometer can measure to a precision of $0.5 ^\circ$C , what is the temperature rise from $20.0 ^\circ$C to $50.0 ^\circ$C and its uncertainty?}
-
-\question{The radius of a sphere is measured to be $5.0$ cm with an uncertainty of 1\%. What is the volume of this sphere and the uncertainty? (Volume of a sphere is given by: $V=\frac{4}{3}\pi R^3$.)}
-
-\question{The power radiated from a star of radius $R$ and surface temperature $T$ is given by the formula: $P = 4\pi \sigma R^2 T^4$, where $\sigma$ is the Stefan–Boltzmann constant known to have the value of $5.67\times10^{-8} \text{ W m}^{-2} \text{ K}^{-4}$. If the sun is measured to have a surface temperature of $5800 \pm 200 \text{ K}$ and a diameter of $(1.40\pm0.03)\times10^9 \text{ m}$. (a) Find the radiation power $P$ of the sun and its absolute uncertainty. (b) Suggest which measurement has a larger effect on the uncertainty in $P$.}
-
-
 
 
 }{}

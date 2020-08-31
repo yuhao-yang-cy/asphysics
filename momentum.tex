@@ -5,7 +5,7 @@
 \subsubsection{momentum}
 
 \begin{ilight}
-	\keypoint{momentum} of an object is defined as the product of its mass and its velocity: $\boxed{p=mv}$ \index{momentum}
+	\centering \keypoint{momentum} of an object is defined as the product of its mass and its velocity: $\boxed{p=mv}$ \index{momentum}
 \end{ilight}
 
 \cmt unit of momentum: $[p]=\text{kg m s}^{-1} = \text{N s}$
@@ -33,7 +33,7 @@ where we have used Newton's second law and defining equation for momentum
 from this derivation, we can give a formal definition for the force
 
 \begin{ilight}
-	\keypoint{force} is defined as the rate of change in momentum: $\boxed{F = \frac{\Delta p}{\Delta t}}$ \index{force}
+	\centering \keypoint{force} is defined as the rate of change in momentum: $\boxed{F = \frac{\Delta p}{\Delta t}}$ \index{force}
 \end{ilight}
 
 
@@ -86,7 +86,7 @@ average force: $F=\frac{\Delta p}{\Delta t} = \frac{2.4}{2.5 \times10^{-3}} = 96
 {
 	\centering
 	
-	$ F = \frac{\Delta p}{\Delta t} = \frac{\Delta (mv)}{\Delta t} = \frac{\Delta m (v-0)}{\Delta t} \xlongequal{m=\rho V} \frac{\rho \Delta V v}{\Delta t} \xlongequal{V=AL} \frac{\rho A \Delta L v}{\Delta t} \xlongequal{\Delta L = v \Delta t} =\rho A v^2 $
+	$ F = \frac{\Delta p}{\Delta t} = \frac{\Delta (mv)}{\Delta t} = \frac{\Delta m (v-0)}{\Delta t} \xlongequal{m=\rho V} \frac{\rho \Delta V v}{\Delta t} \xlongequal{V=AL} \frac{\rho A \Delta L v}{\Delta t} \xlongequal{\Delta L = v \Delta t} \rho A v^2 $
 	\eqyskip\begin{equation*}
 	\RA F = 1.2 \times 10 \times 30^2 = 10800 \text{ N} \teoe
 	\end{equation*}
@@ -171,7 +171,7 @@ final velocity: $v = \frac{\Delta p}{m} = \frac{0.875}{70\times10^{-3}} = 12.5 \
 %
 
 
-\subsubsection{principle of momentum conservation}
+\subsubsection{principle of momentum conservation}\label{ch:momentum-conservation}
 
 change in an object's momentum is given by: $\Delta p = F \Delta t$
 \footnote{The relation $\Delta p = F \Delta t$ is valid if we are dealing with a \emph{constant} force. If the object is acted by a varying force, then the change in its momentum is given by: $\Delta p = \int F \dd t$.}
@@ -197,7 +197,7 @@ therefore, for the system as a whole, effect of internal forces always cancel ou
 change of total momentum of the system would only depend on net external force
 \footnote{A more rigorous derivation goes as follows.
 	
-	Let's consider a system of point objects $m_i$, each experiences a force $F_i$ where $F_i$ can come from some external source or another object $j$ within the system: $F_i = F_{i,\text{ext}} + \sum_j F_{i,j}$.
+	Let's consider a system of point objects $m_i$, each experiences a resultant force $F_i$ where $F_i$ can come from some external source or another object $j$ within the system: $F_i = F_{i,\text{ext}} + \sum_j F_{i,j}$.
 	
 	Summing over all objects, we can write: $\sum_i F_i = \sum_i F_{i,\text{ext}} + \sum_{i,j} F_{i,j}$ 
 	
@@ -313,7 +313,7 @@ then object travelling to the left would have negative momentum/velocity
 \example{A 2.0 kg mass moving at $4.0 \mps$ collides head on with a 5.0 kg mass moving at $1.0 \mps$. After the collision, speed of the 5.0 kg mass is unchanged but its direction is reversed. What is the velocity of the 2.0 kg mass after the collision?}
 
 \solc\begin{equation*}
-m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2 \ra 2.0\times4.0+5.0\times(-1.0) = 2.0 \times v_1 + 5.0\times1.0 \ra v_1 = -1.0 \mps
+m_1 u_1 + m_2 u_2 = m_1 v_1 + m_2 v_2 \, \ra \, 2.0\times4.0+5.0\times(-1.0) = 2.0 \times v_1 + 5.0\times1.0 \, \ra \,  v_1 = -1.0 \mps
 \end{equation*}
 
 minus sign means the 2.0 kg mass reverses direction after collision \eoe
@@ -567,7 +567,7 @@ equations of momentum conservation can be written for two perpendicular directio
 	0 &=& m_1 v_1 \sin\theta_1 - m_2 v_2 \sin\theta_2  & \qquad (\text{in }y\text{-direction}) \end{array}
 \end{equation*}
 
-one can also construct a vector triangle to transform the problem into a geometry problem
+\eqyskip one can also construct a vector triangle to transform the problem into a geometry problem
 
 \begin{wrapfigure}{r}{0.45\textwidth}
 \centering

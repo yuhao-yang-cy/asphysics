@@ -11,7 +11,7 @@ in physics, a force appears when two bodies interact with one another
 	
 	\item[--] \emph{tension}: a force in a string, a rope, a chain, etc. when it is being pulled
 	
-	\item[--] \emph{normal contact}: when a body's surface is compressed, there reacts a normal contact force\footnote{Examples of normal contact force are support force that stops a desk from sinking into the ground, and the impact on a football when you kick it, etc.}
+	\item[--] \emph{normal contact}: when a body's surface is compressed, there reacts a normal contact force\footnote{Examples of normal contact force are support force that stops a desk from sinking into the ground, the impact on a football when you kick it, etc.}
 	
 	\item[--] \emph{friction}: a force that resists relative motion when two surfaces tend to slide over one another
 	
@@ -39,7 +39,7 @@ detailed features of these forces follow later in the notes.
 	\item[--] a change in shape of the object
 \end{compactitem}
 
-in this and the next few chapters, we will be looking into each of these aspects
+in the next few chapters, we will be looking into each of these aspects
 
 \cmt when more than one force act on a body, it is useful to find their \emph{resultant}, or the \emph{net force}
 
@@ -91,7 +91,7 @@ both cases require zero resultant force
 it is in an reference frame that notions of displacement, velocity and acceleration can be defined
 
 an \keypoint{inertial reference frame} is one in which Newton’s laws hold
-\footnote{Inertial frame is not unique. An observer moving at constant velocity to an inertial observer is in a different inertial frame, since constant velocity of object added to a constant relative velocity is still a constant velocity. Two inertial observers would disagree on a body's velocity, but they would agree that the body maintains its velocity in absence of net force, i.e., they will observe the same physics phenomena. This is known as the \emph{equivalence principle}.}
+\footnote{Inertial frame is not unique. An observer moving at constant velocity with respect to an inertial observer is in a different inertial frame, since constant velocity added to a constant relative velocity is still a constant velocity. Two inertial observers would disagree on a body's velocity, but they would agree that the body maintains its velocity in absence of net force, so they will observe the same physics phenomena. This is known as the \emph{equivalence principle}.}
 
 %\begin{example}{Suspension of a slinky}
 %	If a slinky is freely suspended, one notices that the degree to which the slinky is stretched increases uniformly with height.
@@ -130,10 +130,10 @@ to determine change in motion for a body, you should always ask what the resulta
 
 hence mass is a measure of the \emph{inertia} of this object in response to a net force\index{inertia}
 
-a definition for mass of an object from the point of view of Newton's laws can be stated as\footnote{The concept of mass can be defined in many different ways. You might be familiar with the definition for mass as the amount of matter an object possesses. I personally think this definition is a bit vague and does not tell you anything new. Thinking of mass as a measure of inertia surely brings more insights. Mass also tells the strength at which an object interacts with other bodies through the gravitational attraction. As you will see later, from the view of Albert Einstein, it is also possible to think of mass as a form of energy, which is my favourite definition for mass.}:
+a definition for mass of an object from the point of view of Newton's laws can be stated as\footnote{The concept of mass can be defined in many different ways. You might be familiar with the definition for mass as the amount of matter an object possesses. I personally think this definition is a bit vague and does not tell you anything new. Thinking of mass as a measure of inertia surely brings more insights. Mass also tells the strength at which an object interacts with other bodies through the gravitational attraction. As you will see later, from the view of Albert Einstein, it is also possible to think of mass as a form of energy.}:
 
 \begin{ilight}
-	\keypoint{mass} is an intrinsic property of a body to resist any change in its state of motion
+	\centering \keypoint{mass} is an intrinsic property of a body to resist any change in its state of motion
 \end{ilight}
 
 \example{A box of 6.0 kg is being pushed along a horizontal surface with a force of 30 N. The resistive force acting is 21 N. What is the acceleration of the box?}
@@ -143,6 +143,8 @@ a definition for mass of an object from the point of view of Newton's laws can b
 \end{equation*}
 
 \example{A car of mass 800 kg is travelling at a speed of $20 \mps$. The driver then operates the brake pedal so a braking force of 2000 N gradually brings the car to stop. (a) What is the deceleration for the car? (b) What is the stopping distance?}
+
+\newpage
 
 \sol using Newton's second law and noticing braking force acts opposite to direction of motion:
 
@@ -158,19 +160,18 @@ a definition for mass of an object from the point of view of Newton's laws can b
 \feoe
 
 
-
-	\begin{wrapfigure}{R}{0.2\textwidth}
-		\vspace{-18pt}
-		\begin{center}
-			\begin{tikzpicture}[scale=1]
-			\draw[thick] (-1,6) -- (1,6);
-			\draw[thick] (0,6) -- (0,0);
-			\draw[thick, ->, blue] (.5,2) -- (.5,0.5) node[midway, right]{\textcolor{black}{pull}};
-			\draw[fill=gray!40] (0,3) circle[radius=.8];
-			\end{tikzpicture}
-		\end{center}
-		\vspace{-20pt}
-	\end{wrapfigure}
+\begin{wrapfigure}{R}{0.2\textwidth}
+	\vspace{-18pt}
+	\begin{center}
+		\begin{tikzpicture}[scale=1]
+		\draw[thick] (-1,6) -- (1,6);
+		\draw[thick] (0,6) -- (0,0);
+		\draw[thick, ->, blue] (.5,2) -- (.5,0.5) node[midway, right]{\textcolor{black}{pull}};
+		\draw[fill=gray!40] (0,3) circle[radius=.8];
+		\end{tikzpicture}
+	\end{center}
+	\vspace{-20pt}
+\end{wrapfigure}
 	
 \example{A massive ball is suspended on a string. A second string is attached to the bottom of the ball. If one pulls the bottom string with a gradually increasing force, does the top string or the bottom string break first? What if the bottom string is jerked, which string breaks?}	
 	
@@ -247,7 +248,7 @@ all objects exert attractive forces of gravity upon each other\footnote{You will
 
 weight $W$ of any object is proportional to its mass $m$: $\boxed{W=mg}$
 
-$g$ is called the gravitational field strength, or the gravitational acceleration constant
+$g$ is strength of the gravitational field, or the gravitational acceleration constant
 
 \cmt at vicinity of earth's surface, gravitational field is almost uniform: $g \approx 9.81 \text{ N kg}^{-1}$
 
@@ -368,12 +369,18 @@ Rearrange the terms, we find: $v(t) = \frac{mg}{b} \left(1 - \ee^{-\frac{bt}{m}}
 	\draw [thick,blue,domain=0:7,samples=20,smooth,variable=\x] plot (\x,{2.5*(1-exp(-0.8*\x))});
 	\draw [thick,orange] (0,0) -- (1.8,3.6);
 	\draw [thick,dashed] (0,2.5) node[left]{$v_t$} -- (7,2.5);
-	\draw [->] (3,0.6) node[note]{When air drag is small at low speed,\\ acceleration $a$ is slightly less than $g$.} -- (0.45,0.6);
-	\draw [->] (5,1.6) node[note]{Gravity is offset by the increasing air drag, \\ the velocity tends to a terminal value $v_t$.} -- (5,2.4);
-	\draw [->] (4.2,3.1) node[note]{In absense of air, an object falls freely \\ with constant acceleration $g\approx9.81\mpss$.} -- (1.6,3.1);
+	\draw [->] (3,0.6) node[note]{when air drag is small at low speed,\\ acceleration $a$ is slightly less than $g$} -- (0.45,0.6);
+	\draw [->] (5,1.6) node[note]{gravity is offset by the increasing air drag, \\ the velocity tends to a terminal value $v_t$} -- (5,2.4);
+	\draw [->] (4.2,3.1) node[note]{in absence of air, an object falls freely \\ with constant acceleration $g\approx9.81\mpss$} -- (1.6,3.1);
 	\end{tikzpicture}
 	\caption*{variation of velocity for a falling object through air}
 \end{figure}
+
+\cmt at low speeds, air resistance is negligible, so $\fnet =ma \approx mg$
+
+acceleration of object at start of the fall is similar to $g$
+
+but as $v$ increases, acceleration decreases so $a$ becomes less than $g$
 
 \cmt after sufficient long time, acceleration gradually decreases to zero
 
@@ -383,11 +390,7 @@ at this stage, equilibrium is restored: $f=mg$, object no longer accelerates
 
 this constant final velocity is known as the \keypoint{terminal velocity}\index{terminal velocity}
 
-\cmt at low speeds, air resistance is negligible, so $\fnet =ma \approx mg$
 
-acceleration of object at start of the fall is similar to $g$
-
-but as $v$ increases, acceleration decreases so $a$ becomes less than $g$
 
 
 
@@ -445,7 +448,7 @@ at terminal speed, $a\to0$, one has: $U=f+mg$
 
 when two objects are in contact, the interaction between them is called the \emph{contact force}
 
-\keypoint{normal contact force} is the component of contact force that is perpendicular to contact surface
+\keypoint{normal contact force} is the component of contact force perpendicular to the contacting surface
 
 \cmt by definition, normal contact is always at right angle to surface of contact
 

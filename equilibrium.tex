@@ -120,7 +120,7 @@ for same force pair, resultant moment is constant about any point
 
 \subsubsection{moment of weight}
 
-recall that weight is a force of gravity which is actually experienced by every part of the object
+recall that weight is a force of gravity which is actually experienced by \emph{all} parts of the object
 
 when dealing with moment of weight, we need to sum up torques on each part of this object
 
@@ -129,8 +129,13 @@ this brings a problem since the lever arms can be all different
 fortunately, this calculation can be simplified using the idea of centre of gravity
 
 \begin{ilight}
-	\keypoint{centre of gravity} is a point at which the entire weight of an object is considered to act
+	\keypoint{centre of gravity} is a point at which the entire weight of an object is considered to act\index{centre of gravity}
 \end{ilight}
+
+
+
+
+\newpage
 
 \cmt there is a similar concept called the centre of mass
 
@@ -188,7 +193,7 @@ otherwise weight would produce a non-zero torque about the point of suspension, 
 
 \cmt to find the centre of gravity/mass, the object of interest is suspended from several positions
 
-each time we draw a plumb-line through the point of suspension
+each time we draw a vertical \emph{plumb-line} through the point of suspension
 
 centre of mass/gravity lies where the lines intersect
 
@@ -230,10 +235,10 @@ if there is no turning effect for an object, the total moment of all forces must
 
 \cmt an object in equilibrium has no turning effect about any point 
 
-so zero resultant moment about any point
+so resultant moment is zero about any point
 \footnote{As long as there is no resultant force, then zero resultant moment about any particular point would imply zero resultant moment about any point.
 	
-Mathematically, let's take a collection of forces $\overrightarrow{F_1}, \overrightarrow{F_2}, \cdots, \overrightarrow{F_n}$ acting at positions $\overrightarrow{r_1}, \overrightarrow{r_2}, \cdots, \overrightarrow{r_n}$ on an object with respect to some fixed point $O$. Suppose their resultant moment vanishes, i.e., $\sum \overrightarrow{\tau_i} \equiv \sum\overrightarrow{r_i} \times \overrightarrow{F_i} =0$, and also their resultant force vanishes, i.e., $\sum \overrightarrow{F_i} = 0$. If we focus on a different point $P$ with a relative displacement $\overrightarrow{R}$ to point $O'$, then taking moments about $O'$, we will have:
+Mathematically, let's take a collection of forces $\overrightarrow{F_1}, \overrightarrow{F_2}, \cdots, \overrightarrow{F_n}$ acting at positions $\overrightarrow{r_1}, \overrightarrow{r_2}, \cdots, \overrightarrow{r_n}$ on an object with respect to some fixed point $O$. Suppose their resultant moment vanishes, i.e., $\sum \overrightarrow{\tau_i} \equiv \sum\overrightarrow{r_i} \times \overrightarrow{F_i} =0$, and also their resultant force vanishes, i.e., $\sum \overrightarrow{F_i} = 0$. If we focus on a different point $O'$ with a relative displacement $\overrightarrow{R}$ to point $O'$, then taking moments about $O'$, we will have:
 \begin{equation*}
 	\sum \overrightarrow{\tau_i'} = \sum \overrightarrow{r_i'}\times\overrightarrow{F_i} = \sum (\overrightarrow{r_i}+\overrightarrow{R})\times\overrightarrow{F_i} = \sum \overrightarrow{r_i}\times\overrightarrow{F_i} + \overrightarrow{R} \times \sum\overrightarrow{F_i} = 0 + 0 = 0
 \end{equation*}
@@ -427,7 +432,7 @@ one can check that: $F_A + F_B = W_m + W_p$, there must be no resultant force in
 \example{A uniform ladder of weight 120 N rests on a rough ground against a smooth wall as shown. The dimensions are labelled on the diagram. (a) What is the contact force acting at $B$? (b) What is the contact force acting at $A$? (c) What is the frictional force at $B$?}
 
 
-\sol we draw free-body diagram as shown
+\sol free-body diagram is drawn as shown
 
 resolve vertically: $R_B = W \RA R_B = 120 \text{ N}$
 
@@ -442,7 +447,8 @@ take moments about $B$: $R_A y = W \frac{x}{2}$
 
 resolve horizontally: $f_B = R_A \RA f_B = 45 \text{ N}$ \eoe
 
-\begin{wrapfigure}{r}{0.42\textwidth}
+\begin{wrapfigure}{r}{0.4\textwidth}
+	\vspace*{-12pt}
 	\centering
 	\begin{tikzpicture}[scale=0.8]
 	\draw (0,-1.5) -- (0,4.5);
@@ -461,7 +467,7 @@ resolve horizontally: $f_B = R_A \RA f_B = 45 \text{ N}$ \eoe
 \end{wrapfigure}
 
 
-\example{The diagram shows a uniform rod $AB$ of weight 60 N that is held horizontally to a vertical wall by means of a light string. The string is attached to the rod at $B$, where a basket of weight 40 N is suspended. The other end of the string is fixed on the wall at $C$. The angle between the string and the rod is $30^\circ$. (a) Find the tension in the string. (b) Find the force acting on the rod at $A$.}
+\example{The diagram shows a uniform rod $AB$ of weight 60 N being held horizontally to a vertical wall by means of a light string. The string is attached to the rod at $B$, where a basket of weight 40 N is suspended. The other end of the string is fixed on the wall at $C$. The angle between the string and the rod is $30^\circ$. (a) Find the tension in the string. (b) Find the force acting on the rod at point $A$.}
 
 \sol take moments about $A$: $TL\sin\theta = W_b L + W_r  \frac{1}{2}L$
 
@@ -502,7 +508,7 @@ suppose two forces $F_1$ and $F_2$ are acting on an object in equilibrium
 	
 	\item[--] to have zero resultant moment, $F_1$ and $F_2$ must act along same line
 	
-	otherwise they would produce torque of couple, which causes turning effects
+	otherwise they produce torque of couple that causes turning effects
 \end{compactenum}
 
 
@@ -605,7 +611,7 @@ $T_1$, $T_2$ and $W$ form an equilateral triangle, so
 \newpage
 
 \begin{wrapfigure}{r}{0.33\textwidth}
-	\vspace*{-5pt}
+	\vspace*{-12pt}
 	\centering
 	\begin{tikzpicture}[scale=0.7]
 	\draw (-1.5,0) rectangle (1.5,-2);
@@ -625,7 +631,7 @@ $T_1$, $T_2$ and $W$ form an equilateral triangle, so
 	\node at (-0.55,-5.65) {{\scriptsize $60^\circ$}};
 	\node at (-0.6,-7.3) {{\scriptsize $45^\circ$}};
 	\end{tikzpicture}
-	\vspace*{-10pt}
+	\vspace*{-18pt}
 \end{wrapfigure}
 
 \example{The same painting of weight $W=20\text{ N}$ is supported by two strings at different angles $\theta_1=30^\circ$ and $\theta_2=45^\circ$ as shown. Find the forces in the two strings.}
@@ -652,9 +658,9 @@ $T_1$, $T_2$ and $W$ form an equilateral triangle, so
 
 \eqyskip solving this, we find: $T_1 \approx 14.6\text{ N}\, , \, T_2 \approx 17.9\text{ N} $
 
-alternatively, we construct the force triangle, computation for $T_1$ and $T_2$ would be more straightforward
+alternatively, we construct the force triangle as shown
 
-the three forces are related by the the law of sine:
+$T_1$ and $T_2$  are related to $W$ by the the law of sine:
 
 {
 	\centering
@@ -670,6 +676,24 @@ from this we get the same result: $T_1 \approx 14.6\text{ N}\, , \, T_2 \approx 
 \subsubsection{concurrent forces}
 
 for three forces in equilibrium, they must produce zero resultant moment about any point
+
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\vspace*{-15pt}
+	\centering
+	\begin{tikzpicture}[xscale=0.4, yscale=0.6]
+	\draw[fill=gray!20] (-3.2,0.4) to [out=25,in=170] (-1,0.7) to [out=-10,in=150] (2.7,0.9) to [out=-30,in=35] (2.5,-1.3) to [out=215,in=30] (-0.5,-1.3) to [out=210,in=205] (-3.2,0.4);
+	\draw[thick, blue, ->] (1,0) --++ (4,0) node[above]{$F_1$};
+	\draw[thick, blue, ->] (240:1) --++ (240:2) node[left]{$F_3$};
+	\draw[thick, blue, ->] (150:0.6) --++ (150:3.46) node[left]{$F_2$};
+	\draw[dashed] (0,0) -- (1,0);
+	\draw[dashed] (0,0) -- (240:1);
+	\draw[dashed] (0,0) -- (150:0.6);
+	\draw[fill] (0,0) circle(0.09 and 0.06);
+	\node at (-60:0.5) {$P$};
+	\end{tikzpicture}
+	\vspace*{-15pt}
+\end{wrapfigure}
+
 
 suppose lines of action of $F_1$ and $F_2$ meet at point $P$
 

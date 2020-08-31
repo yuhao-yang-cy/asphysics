@@ -1,17 +1,17 @@
 \section{Kinematics}
 
-Kinematics is the study of motion. In this chapter, we define three useful kinematic quantities, displacement, velocity and acceleration, and use these terms to discuss the motion of an object.
+Kinematics is the study of motion. We will introduce three kinematic quantities, displacement, velocity and acceleration, and see how these terms are used to describe an object's motion.
 
 \subsection{kinematic quantities}
 
 \subsubsection{displacement \& distance}
 
-in everyday language, we talk about the \keypoint{distance} travelled by an object, which usually refers to the length travelled by an object without considering in what direction it moves
+in everyday language, we talk about the \keypoint{distance} travelled by an object, which usually refers to the length travelled by an object without considering in which direction it moves
 
-to fully describe position of an object, we also need specify where it moves
+to fully describe position of an object, we also need specify where it is heading
 
 \begin{ilight}
-	we define \keypoint{displacement} as the distance moved by an object in a specific direction\index{displacement}
+	\centering \keypoint{displacement} is defined as the distance moved by an object in a specific direction\index{displacement}
 \end{ilight}
 
 \cmt displacement and distance are measured in metres, or any reasonable length units
@@ -76,24 +76,18 @@ displacement of a moving object may change with respect to time
 an object is moving fast if it has a large change in displacement during a given time interval
 
 \begin{ilight}
-	change in displacement per unit time is called the \keypoint{velocity} of the object\index{velocity}: $\boxed{v=\frac{\Delta s}{\Delta t}}$
+	\centering change in displacement per unit time is called the \keypoint{velocity} of the object\index{velocity}: $\boxed{v=\frac{\Delta s}{\Delta t}}$
 \end{ilight}
 
 \cmt SI unit of measurement for velocity: $[v]= \mps$
 
-\cmt velocity is a vector quantity
+\cmt velocity is a vector
 
 this follows from the fact that displacement is a vector quantity
 
 \cmt for \emph{linear} motion, one shall pick a specific direction as the positive direction
 
 then a negative velocity implies motion in the opposite direction
-
-\cmt it is also common to use \keypoint{speed} to describe how fast an object moves
-
-speed is defined as the change of the distance travelled per unit time
-
-velocity can be thought as speed in a particular direction
 
 \cmt defining equation $v=\frac{\Delta s}{\Delta t}$ gives the \emph{average} value for velocity or speed over an interval $\Delta t$
 
@@ -106,6 +100,18 @@ instantaneous velocity is defined as the rate of change in displacement at a par
 if we take a very short interval $\Delta t$, as $\Delta t \to 0$, average velocity tends to instantaneous velocity
 
 this is expressed in a compact differential form: $v = \lim_{\Delta t \to 0} \frac{\Delta s}{\Delta t} \ra \boxed{v=\frac{\dd s}{\dd t}} $
+
+
+\newpage
+
+
+\cmt it is also common to use \keypoint{speed} to describe how fast an object moves
+
+speed is defined as the change of the distance travelled per unit time
+
+velocity can be thought as speed in a particular direction
+
+
 
 \example{A cyclist travels a distance of 3.0 km in 20 minutes. She rests for 15 minutes. She then covers a further distance of 5.1 km in a time of 40 minutes. Calculate the average speed of the cyclist in m s$^{-1}$: (a) during the first 20 minutes of the journey, (b) for the whole journey.}
 
@@ -133,10 +139,10 @@ change in displacement is zero, so average velocity is zero \eoe
 
 \subsubsection{acceleration}
 
-velocity of a moving object may change as well, i.e., objects can speed up or slow down
+velocity of a moving object may change, i.e., objects can speed up, slow down or make turns
 
 \begin{ilight}
-	change in velocity per unit time is defined as the \keypoint{acceleration}\index{acceleration}: $\boxed{a = \frac{\Delta v}{\Delta t}}$
+	\centering change in velocity per unit time is defined as the \keypoint{acceleration}\index{acceleration}: $\boxed{a = \frac{\Delta v}{\Delta t}}$
 \end{ilight}
 
 \cmt unit of measurement for acceleration: $[a]= \mpss$
@@ -174,7 +180,7 @@ average acceleration: $a = \frac{\Delta v}{\Delta t} = \frac{27}{30 \times 10^{-
 
 \subsection{motion graphs}
 
-how one physical quantity changes with another quantity can be visually shown on a \emph{graph}
+how one quantity changes with another quantity can be visually shown on a \emph{graph}
 
 changes in displacement, velocity or acceleration over time can be shown on \emph{motion graphs}\index{motion graphs}
 
@@ -268,12 +274,12 @@ a velocity-time graph shows the velocity of a moving object at any instant
 \boxed{\text{acceleration} = \text{gradient of $v$-$t$ graph}}
 \end{equation*}
 
-\cmt $v$-$t$ graph also gives information about the change in displacement
+\cmt $v$-$t$ graph also gives information about the change in displacement, that is
 \begin{equation*}
 \boxed{\text{change in displacement} = \text{area under $v$-$t$ graph}}
 \end{equation*}
 
-in very short time interval $\Delta t_i$, change in velocity is small so $v(t_i)\approx\text{constant}$ during this time
+\noindent\textbf{reasoning}: in very short interval $\Delta t_i$, change in velocity is small so $v(t_i)\approx\text{constant}$ during $\Delta t_i$
 
 displacement moved out $\Delta s_i \approx v(t_i) \Delta t_i$, which corresponds to area of a thin rectangle
 
@@ -283,6 +289,8 @@ now consider the limit where each of the time interval $\Delta t_i \to 0$
 
 total area of these rectangles approximates area bounded by the $v$-$t$ curve and time axis
 \footnote{Mathematically, integration is the inverse operation of taking derivatives. By definition $v=\frac{\dd s}{\dd t}$, then it follows naturally that $\Delta s = \int v\dd t$. While the derivative of a given function gives the gradient of tangent at each point on its graph, integrating a function gives the signed area bounded by the graph. The reader may find the formal treatment of this relationship in any calculus textbook.}
+
+
 
 \begin{figure}[!ht]
 	\noindent\centering
@@ -404,7 +412,7 @@ relationships between displacement, velocity and acceleration graphs are summari
 	\centering
 	\begin{minipage}{0.3\textwidth}
 		\centering
-		\begin{tikzpicture}[xscale=0.6,yscale=0.9]
+		\begin{tikzpicture}[xscale=0.6,yscale=0.85]
 		\draw[<->] (0,2) node[left]{$s$} -- (0,0) -- (7,0) node[below]{$t$};
 		\draw (0,0) -- (0,-2);
 		\draw [thick,blue,domain=0:6.7,smooth] plot (\x, {1.6*sin(\x r)});
@@ -412,7 +420,7 @@ relationships between displacement, velocity and acceleration graphs are summari
 	\end{minipage}\hfil
 	\begin{minipage}{0.3\textwidth}
 		\centering
-		\begin{tikzpicture}[xscale=0.6,yscale=0.9]
+		\begin{tikzpicture}[xscale=0.6,yscale=0.85]
 		\draw[<->] (0,2) node[left]{$v$} -- (0,0) -- (7,0) node[below]{$t$};
 		\draw (0,0) -- (0,-2);
 		\draw [thick,red,domain=0:6.7,smooth] plot (\x, {1.6*cos(\x r)});
@@ -420,7 +428,7 @@ relationships between displacement, velocity and acceleration graphs are summari
 	\end{minipage}\hfil
 	\begin{minipage}{0.3\textwidth}
 		\centering
-		\begin{tikzpicture}[xscale=0.6,yscale=0.9]
+		\begin{tikzpicture}[xscale=0.6,yscale=0.85]
 		\draw[<->] (0,2) node[left]{$a$} -- (0,0) -- (7,0) node[below]{$t$};
 		\draw (0,0) -- (0,-2);
 		\draw [thick,red,domain=0:6.7,smooth] plot (\x, {-1.6*sin(\x r)});
@@ -460,12 +468,9 @@ relationships between displacement, velocity and acceleration graphs are summari
 
 let's look at the simplest kind of motion
 
-that is, an object moving at constant speed in a straight line: $v=\text{constant}$
+that is, an object moving at constant speed in a straight line: $\, v=\text{constant}$
 
-the equations of motion are straightforward:
-\begin{equation}
-	a=0 \qquad \boxed{s=vt}\footnote{It is implicitly assumed that the motion starts from the origin with respect to which displacement is defined. More generically, we should write: $s = s_0 + vt$, where $s_0$ is the initial displacement.}
-\end{equation}
+the equations of motion are straightforward: $\, \boxed{a=0} \qquad \boxed{s=vt}$ \footnote{It is implicitly assumed that the motion starts from the origin with respect to which displacement is defined. More generically, we should write: $s = s_0 + vt$, where $s_0$ is the initial displacement.}
 
 \begin{figure}[htp]
 	\centering
@@ -519,7 +524,7 @@ the second simplest type of motion is a linear motion with acceleration $a=\text
 		\draw[very thick,blue] (0,2.5) -- (3.6,2.5);
 		\end{tikzpicture}
 	\end{minipage}
-	\caption*{motion graphs for linear motion at constant acceleration}\label{fig:const_a_graph}
+	\caption*{motion graphs for linear motion at uniform acceleration}\label{fig:const_a_graph}
 \end{figure}
 
 \subsubsection{equations of motion}
@@ -556,7 +561,7 @@ from \eqref{eqn:const_a_eq1} we have $t=\frac{v-u}{a}$, substitute this into \eq
 	s=\frac{1}{2}(u+v)\times\frac{v-u}{a} \RA \boxed{2as = v^2 - u^2}
 \end{equation}
 
-\example{A car starts from rest and accelerates uniformly at 5.0\mpss for 6.0 s. (a) How fast is the car travelling at $t=8.0$ s? (b) What is the distance travelled by the car in this time?}
+\example{A car starts from rest and accelerates uniformly at 5.0 m s$^{-2}$ for 6.0 s. (a) How fast is the car travelling at $t=8.0$ s? (b) What is the distance travelled by the car in this time?}
 
 \solc\begin{equation*}
 v=u+at \RA v = 0 + 5.0\times 6.0 = 30 \mps
@@ -594,7 +599,9 @@ everything has the tendency to fall towards ground due to earth's gravity
 
 in this section, we assume that effects of air resistance are negligible
 
-acceleration of free fall is then a constant $a=g$, regardless of mass of falling object\footnote{The reason for this constant acceleration of free fall will be elaborated in $\S$\ref{ch_weight}.}
+acceleration of free fall is then constant $a=g$
+
+value of $g$ does not depend on mass of the falling object\footnote{The reason for this constant acceleration of free fall will be elaborated in $\S$\ref{ch_weight}.}
 
 \cmt near surface of earth, value of acceleration of free fall: $g\approx9.81\mpss$
 
@@ -616,10 +623,15 @@ s=ut+\frac{1}{2} at^2 = 0\cdot t + \frac{1}{2}gt^2 \RA s=\frac{1}{2}gt^2
 h = \frac{1}{2}gt^2 \RA t = \sqrt{\frac{2h}{g}} = \sqrt{\frac{2\times24}{9.81}} \approx 2.21 \text{ s}
 \end{equation*}
 \begin{equation*}
-v = gt = 9.81 \times 2.21 \approx 21.7 \mps \teoe
+v = gt = 9.81 \times 2.21 \RA v \approx 21.7 \mps
 \end{equation*}
 
-\example{A photograph is taken for a small particle falling from rest. The photograph is taken at 0.400 s after the object is released. Since the particle is still moving when the photograph is being taken, the image is blurred. The blurred part is found to have a length of 20.8 cm. What is time of exposure for the photograph?}
+to find final velocity, one can also use $v^2 = u^2 + 2as$:
+\begin{equation*}
+v^2 = \cancelto{0}{u^2} + 2gh = 2\times9.81\times24 \RA v \approx 21.7 \mps \teoe
+\end{equation*}
+
+\example{A photograph is taken for a small particle falling from rest. The photograph is taken at 0.400 s after the object is released. Since the particle is still moving when the photograph is being taken, the image is blurred. It is found the blurred part corresponds to a length of 20.8 cm moved out by the particle, what is time of exposure for the photograph?}
 
 \sol from $t=0$ to right before photo is taken: 
 
@@ -652,7 +664,7 @@ so we will have different signs for $u$ and $a$ in the equations
 
 conventionally, positive direction is taken as same direction as initial velocity
 
-in our case, positive direction is upwards, the acceleration is then negative $a=-g$
+in our case, positive direction is upwards, the acceleration is then negative: $a=-g$
 
 so the velocity-time relation and displacement-time relation are
 \begin{equation*}
@@ -688,7 +700,7 @@ v = u - gt \quad \quad s = ut - \frac{1}{2}gt^2
 \caption*{$v$-$t$ graph and $s$-$t$ graph for upward projectile motion}
 \end{figure}
 
-\cmt sign of $v$ now gives direction of motion
+\cmt sign of $v$ now tells direction of motion
 
 $v>0$ means object is moving upwards, $v<0$ means it has reversed direction and starts falling
 
@@ -735,7 +747,7 @@ one can also attempt $s = ut - \frac{1}{2}gt^2$, this leads to the equation: $-3
 
 this quadratic equation in $t$ gives two roots: $t_1 \approx 4.46 \text{ s}$, and $t_2 \approx -1.60 \text{ s}$
 
-negative root should be discarded since it means stones hits the sea below it is thrown
+negative root should be discarded since it means stones hits the sea before it is thrown
 
 so time taken for stone to hit the sea is $t \approx 4.46\text{ s}$ \eoe
 
@@ -757,7 +769,7 @@ gravity causes a constant acceleration of free fall that acts vertically downwar
 
 \titem vertically: constant acceleration, vertical component of velocity $v_y$ varies over time
 
-as a consequence, a projectile would follows a \emph{parabolic} path as it travels\footnote{You may be able to prove this statement in Question \ref{Q-projectile-eqn}.}
+as a consequence, a projectile would follows a \emph{parabolic} path as it travels\footnote{\ifthenelse{\includequestions=1}{You may be able to prove this statement in Question \ref{Q-projectile-eqn}.}{You may try to prove this statement with a bit algebra.}}
 
 
 \vspace*{\baselineskip}
@@ -862,7 +874,7 @@ to obtain the greatest horizontal range, two things are required
 
 \titem sufficiently long time $T$ staying in the air
 
-however, a larger $v_x$ requires a smaller $\theta$, hence a shorter airborne time $T$
+however, a larger $v_x$ requires a smaller $\theta$, which means a shorter airborne time $T$
 
 therefore, there is a compromise between the two
 
