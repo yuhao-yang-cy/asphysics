@@ -2,9 +2,25 @@
 
 This is a set of very concise lecture notes written for [CIE AS-level Physics](https://www.cambridgeinternational.org/programmes-and-qualifications/cambridge-international-as-and-a-level-physics-9702/) (syllabus code 9702). Presumably the target audience of the notes are students studying the relevant course.
 
-I am still working on the notes. The latest release is far from complete as it only covers the first few chapters. I hope I will follow up the other chapters before the end of this year.
-
 If you spot any errors, please let me know.
+
+## Table of Contents
+
+- [x] Physical Quantities
+- [x] Measurements
+- [x] Kinematics
+- [x] Force & Motion
+- [x] Mechanical Equilibrium
+- [x] Momentum
+- [x] Work & Energy
+- [x] Solids
+- [x] Fluids
+- [x] Waves
+- [x] Superposition of Waves
+- [x] Electrical Quantities & Components
+- [x] Current Electricity
+- [x] Electric Fields
+- [x] Sub-atomic Particles
 
 ## How to Use
 
