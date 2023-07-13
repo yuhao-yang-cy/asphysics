@@ -118,7 +118,7 @@ let's take cross section $A$ of a material, and see what determines the electric
 
 \begin{figure}[ht]
 	\centering
-	\begin{tikzpicture}[scale=0.95]
+	\begin{tikzpicture}[scale=1.5]
 	\draw[fill=orange!40, opacity=0.4] (5,-1) arc(-90:90:0.5 and 1) -- (2,1) arc(90:270:0.5 and 1) -- (5,-1);
 	\draw[thick] (0,0) ellipse (0.5 and 1) node {$A$};
 	\draw[dashed] (2,0) ellipse (0.5 and 1);
@@ -136,6 +136,8 @@ let's take cross section $A$ of a material, and see what determines the electric
 
 
 let's define $n$ being the number density of charge carriers for the material
+
+i.e., $n = \frac{N}{V}$ gives the number of charge carriers per unit volume
 
 then total number $N$ of charge carriers in a volume $V$ can be given by: $N = nV$
 
@@ -217,11 +219,6 @@ current always flows from a higher potential to a lower potential
 charge needed for each start: $Q = I t = 150 \times 2.0 = 300 \text{ C}$
 
 number of starts possible: $N = \frac{Q_\text{total}}{Q} = \frac{75000}{300} = 250$ \eoe
-
-
-
-
-\newpage
 
 \example{Electrons beams are accelerated between a heated cathode and an anode with a potential difference of 40 V. What is the speed of the electrons when they reach the anode?}
 
@@ -319,6 +316,7 @@ if a p.d. of 1 V drives a current of 1 A, power produced is 1 W, i.e., $1 \text{
 same current $I$, same diameter $d$, same resistivity $\rho$, so power: $P \propto L \RA	\frac{P_X}{P_Y} = \frac{L_X}{L_Y} = 2 $ \eoe
 
 
+\newpage 
 
 \subsection{electrical components \& $I$-$V$ characteristics}
 
@@ -435,7 +433,7 @@ at greater currents, current increases more for same p.d. increase
 
 \begin{figure}[ht]
 	\centering
-	\begin{tikzpicture}[scale=1.5]
+	\begin{tikzpicture}[xscale=1.4, yscale=2]
 	\draw[->] (0,-1.5) -- (0,3) node[left]{$I$};
 	\draw[->] (-3.5,0) -- (5.2,0) node[below]{$V$};
 	\draw[thick, blue] (-3.2,0) -- (1,0) node[below, black]{$V_\text{th}$} [out=0, in=268] to (2.1,3);

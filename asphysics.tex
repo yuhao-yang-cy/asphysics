@@ -39,6 +39,9 @@
 \usepackage[bottom]{footmisc}
 \usepackage{ifthen}
 \usepackage{makeidx}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{background}
 
 % % % % % % % % % %
 
@@ -74,7 +77,16 @@
 {\addvspace{-1pt}\small}{}{}
 {\ - \small\thecontentspage}
 [ /\ ][]
-
+\titlecontents{part}[0pc]
+{\addvspace{10pt}%
+	\large\bfseries%
+}
+{}
+{}
+{\;\color{Gray}\titlerule\;\large\sc\bfseries Page \thecontentspage
+	\begin{tikzpicture}[remember picture, overlay]
+		\draw[fill=Gray!70,draw=Gray!70] (2pt,0) rectangle (6,0.1pt);
+\end{tikzpicture}}%
 
 
 % font type
@@ -87,6 +99,7 @@
 \renewcommand{\boxed}[1]{\textcolor{black}{%
 \tikz[baseline={([yshift=-.72ex] current bounding box.center)}] \node [thick, rectangle, minimum width=1ex,rounded corners,fill=yellow!30, draw=orange] {\normalcolor\m@th$\displaystyle#1$};}}
 \tikzset{nomorepostaction/.code={\let\tikz@postactions\pgfutil@empty}}
+
 \renewcommand\normalsize{%
 	\@setfontsize\normalsize\@xpt\@xiipt
 	\abovedisplayskip 0\p@ plus 5\p@ minus 3\p@
@@ -96,6 +109,18 @@
 	\let\@listi\@listI}
 \setlength{\@fptop}{0pt}
 \newcommand{\specialcell}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\ignorespaces\fi}
+
+% table of contents title
+\renewcommand{\tableofcontents}{%
+	\begin{tikzpicture}[remember picture, overlay]%
+		\pgftext[right,x=13.5cm,y=0.2cm]{\color{Gray}\Huge\sc\bfseries \contentsname};%
+		\draw[fill=Gray!70,draw=Gray!70] (11.42,-.75) rectangle (20,1);%
+		\clip (11.42,-.75) rectangle (20,1);
+		\pgftext[right,x=13.5cm,y=0.2cm]{\color{white}\Huge\sc\bfseries \contentsname};%
+	\end{tikzpicture}%
+	\vspace*{20\p@}%
+	\@starttoc{toc}}
+
 \makeatother
 
 
@@ -177,23 +202,37 @@
 
 \makeindex
 
+\backgroundsetup{
+	contents={\includegraphics{easyday-watermark.png}},
+	angle=0,
+	scale=1,
+	opacity=0.28
+}%
+
+
 \begin{document}
 \thispagestyle{empty}
 \include{cover}
-\thispagestyle{empty}
+\newpage
 
+\thispagestyle{empty}
+\include{blankpage}
 \newpage
 
 \setcounter{page}{1}
 \pagenumbering{roman} 
+\pagestyle{plain}
+\include{issues}
 \tableofcontents
 %\listoffigures
+
+\clearpage
+\pagestyle{fancy}
 
 \newpage
 \setcounter{page}{1}
 \pagenumbering{arabic}
 
-\include{issues}
 \include{physical-quantities}
 \include{measurements}
 \include{kinematics}
@@ -201,8 +240,6 @@
 \include{equilibrium}
 \include{momentum}
 \include{work-energy}
-
-
 \include{solids}
 \include{fluids}
 \include{waves}
@@ -213,6 +250,12 @@
 \include{particle-physics}
 
 \newpage
+
+\appendix
+\include{as-definitions}
+\include{as-formula}
+\include{constants}
+
 \printindex
 
 \end{document}

@@ -56,13 +56,7 @@ electrons move around the nucleus in a \emph{cloud}
 	\end{tabular}
 \end{center}
 
-
-
-
-
-
-
-\subsubsection{\texorpdfstring{$\alpha$}{\textalpha}-particle scattering experiment}
+\subsubsection{\texorpdfstring{$\alpha$}{\textsubscript{\textalpha}}-particle scattering experiment}
 
 experiments were designed to verify if the model gives the right description of an atom
 
@@ -245,7 +239,7 @@ whether or not decay occurs can only be given by probabilities
 
 
 
-\subsubsection{properties of \texorpdfstring{$\alpha$}{\textalpha}-, \texorpdfstring{$\beta$}{\textbeta}- \& \texorpdfstring{$\gamma$}{\textgamma}-radiation}
+\subsubsection{properties of \texorpdfstring{$\alpha$}{\textsubscript{\textalpha}}-, \texorpdfstring{$\beta$}{\textsubscript{\textbeta}}- \& \texorpdfstring{$\gamma$}{\textsubscript{\textgamma}}-radiation}
 
 \subsubsection*{nature of \texorpdfstring{$\alpha$}{\textalpha}-radiation}
 
@@ -581,23 +575,23 @@ one type of the elementary matter particle is the \keypoint{quark}\index{quark}
 
 \cmt quarks come in six varieties, or six \keypoint{flavours}
 
-they are \keypoint{up} (u), \keypoint{down} (d), \keypoint{strange} (s), top (t), bottom (b), charm (c)
-
-in A-Level exams, you only need to know up (u), down (d) and strange (s) quarks
+they are \keypoint{up} (u), \keypoint{down} (d), \keypoint{strange} (s), \keypoint{chartm} (c), \keypoint{top} (t), \keypoint{bottom} (b)
 
 \cmt each quark carries an electric charge, as given in the table below
 
 \begin{center}
 	{\renewcommand{\arraystretch}{1.35}
-		\begin{tabular}{|C{1.5cm}|C{1.25cm}|C{1.25cm}|C{1.25cm}|C{1.25cm}|C{1.25cm}|C{1.25cm}|}
-			\hline quark & u & d & s & t & b & c \\
-			\hline charge & $+\frac{2}{3}e$ & $-\frac{1}{3}e$ & $-\frac{1}{3}e$ & $+\frac{2}{3}e$ & $-\frac{1}{3}e$ & $+\frac{2}{3}e$ \\[3pt]
+		\begin{tabular}{|C{3cm}|C{2cm}|C{2cm}|}
+			\hline  & u & d \\
+			 quarks & c & s \\
+			  & t & b \\
+			\hline charge & $+\frac{2}{3}e$ & $-\frac{1}{3}e$ \\[3pt]
 			\hline
 		\end{tabular}
 	}
 \end{center}
 
-note that all quarks carry a fraction of the elementary charge unit
+note that all quarks carry a \emph{fraction} of the elementary charge unit\footnote{Each horizontal line in the table is known as a \emph{generations} of quarks. As you can see, there are three generations of quarks.}
 
 \cmt quarks can combine to form composite particles called \keypoint{hadrons} \index{hadron}
 
@@ -633,7 +627,7 @@ strong nuclear force is a very short-ranged attractive force
 \end{compactenum}
 
 
-\cmt quarks only exist in hadrons, i.e., there are no single free quarks in nature\footnote{This is known as the \emph{asymptotic freedom} of strong nuclear forces.}
+\cmt quarks only exist in hadrons, i.e., there are no single free quarks in nature\footnote{This is known as the \emph{confinement}, a consequence that is closely related to the fact that interaction between quarks are weak at high energies or smaller length scales but strong at low energies or large length scales, a feature of strong nuclear forces known as \emph{asymptotic freedom}.}
 
 
 \example{By reference to the quark composition, explain the electric charge of protons and neutrons.}
@@ -646,7 +640,7 @@ strong nuclear force is a very short-ranged attractive force
 
 \sol charge of the other quark is: $(+e) - \left(+\frac{2}{3}e\right) = +\frac{1}{3}e$
 
-this could be an anti-down ($\bar{\text{d}}$) or an anti-strange quark ($\bar{\text{s}}$) \eoe
+this could be an anti-down ($\bar{\text{d}}$), an anti-strange ($\bar{\text{s}}$), or an anti-bottom quark ($\bar{\text{b}}$)\eoe
 
 
 
@@ -656,7 +650,7 @@ another type of the elementary matter particle is the \keypoint{lepton}\index{le
 
 \cmt leptons are not affected by strong nuclear forces
 
-\cmt members of the lepton family include electrons (e), neutrinos ($\nu$), muons ($\mu$), taons ($\tau$)
+\cmt members of the lepton family include electrons (e), neutrinos ($\nu$), muons ($\mu$), taons ($\tau$)\footnote{Just like the quarks, leptons also come in three \emph{generations}. Each generation of leptons consists of an electron-like particle and its associated neutrino.}
 
 in A-Level exams, you only need to know electrons (e) and neutrinos ($\nu$)
 
@@ -671,10 +665,7 @@ in A-Level exams, you only need to know electrons (e) and neutrinos ($\nu$)
 	 \item[--]any other particle has lepton number $L=0$
 \end{compactitem}
 
-
-\vspace*{\baselineskip}
-
-classification of sub-atomic particles within the A-Level syllabus\footnote{This is an over-simplified version of the Standard Model. I only included the particles that you need to know for the A-Level exams. There are a lot of missing pieces that are way beyond the scope of our course.} is summarised below
+classification of sub-atomic particles within the A-Level syllabus\footnote{This is an over-simplified version of the Standard Model. I only included the particles that you need to know for the A-Level exams. There are a lot of missing pieces that are way beyond the scope of our course, so please don't take this mindmap too seriously.} is summarised below
 
 \begin{figure}[ht]
 	\centering
@@ -683,40 +674,43 @@ classification of sub-atomic particles within the A-Level syllabus\footnote{This
 %	\foreach \x in {1,2,...,15} \node[below] at (\x,0) {\x};
 %	\foreach \y in {-5,-4,...,5} \node[left] at (0,\y) {\y};
 	% root / fundamental particles
-	\draw (2.5,0) -- (3.5,0) (4.5, -1.5) -- (3.5,-1.5) -- (3.5, 1.5) -- (4.5, 1.5);
-	\draw[rounded corners, fill=white] (0.1,-0.7) rectangle (2.5,0.7);
-	\draw (1.3,0) node[twolinecap] {fundamental\\particles};
+	\draw (2.5,0.4) -- (3.5,0.4) (4.5, -1.7) -- (3.5,-1.7) -- (3.5, 2.5) -- (4.5, 2.5);
+	\draw[rounded corners, fill=white] (0.1,-0.3) rectangle (2.5,1.1);
+	\draw (1.3,0.4) node[twolinecap] {fundamental\\particles};
 	% quarks
-	\draw[rounded corners, fill=white] (4.3,1.2) rectangle (5.9, 1.8);
-	\draw (5.1, 1.5) node {quarks};	
-	\draw (4.9, 1.1) -- (4.3, 0.6) node[below]{u};
-	\draw (5.1, 1.1) -- (5.1, 0.6);
-	\node at (5.1, 0.42) {d};
-	\draw (5.3, 1.1) -- (5.9, 0.6) node[below]{s};
-	\node at (4.3, -0.2) {{\scriptsize $+\frac{2}{3}e$}};
-	\node at (5.1, -0.2) {{\scriptsize $-\frac{1}{3}e$}};
-	\node at (5.9, -0.2) {{\scriptsize $-\frac{1}{3}e$}};
+	\draw[rounded corners, fill=white] (4.3,2.2) rectangle (5.9, 2.8);
+	\draw (5.1, 2.5) node {quarks};	
+	\draw (5.0, 2.1) -- (4.6, 1.6);
+	\draw (5.2, 2.1) -- (5.6, 1.6);
+	\node at (4.6, 1.4) {u};
+	\node at (5.6, 1.4) {d};
+	\node at (4.6, 0.9) {c};
+	\node at (5.6, 0.9) {s};
+	\node at (4.6, 0.4) {t};
+	\node at (5.6, 0.4) {b};
+	\node at (4.6, -0.2) {{\scriptsize $+\frac{2}{3}e$}};
+	\node at (5.6, -0.2) {{\scriptsize $-\frac{1}{3}e$}};
 	% leptons
-	\draw[rounded corners, fill=white] (4.3,-1.2) rectangle (5.9, -1.8);
-	\draw (5.1, -1.5) node {leptons};
-	\draw (5.0, -1.9) -- (4.6, -2.4) node[below]{e};
-	\draw (5.2, -1.9) -- (5.6, -2.4) node[below]{$\nu$};
-	\node at (4.6, -2.95) {{\scriptsize $-e$}};
-	\node at (5.6, -2.95) {{\scriptsize $0$}};
+	\draw[rounded corners, fill=white] (4.3,-1.4) rectangle (5.9, -2.0);
+	\draw (5.1, -1.7) node {leptons};
+	\draw (5.0, -2.1) -- (4.6, -2.6) node[below]{e};
+	\draw (5.2, -2.1) -- (5.6, -2.6) node[below]{$\nu$};
+	\node at (4.6, -3.2) {{\scriptsize $-e$}};
+	\node at (5.6, -3.2) {{\scriptsize $0$}};
 	% hadrons
-	\draw[dashed, ->] (5.9, 1.5) -- (8.1,1.5) node[midway, above]{make up};
-	\draw[rounded corners, fill=white] (8.1,1.2) rectangle (9.9, 1.8);
-	\draw (9, 1.5) node {hadrons};
+	\draw[dashed, ->] (5.9, 2.5) -- (8.1,2.5) node[midway, above]{make up};
+	\draw[rounded corners, fill=white] (8.1,2.2) rectangle (9.9, 2.8);
+	\draw (9, 2.5) node {hadrons};
 	% baryons
-	\draw (9.9, 1.5) -- (10.5, 1.5) -- (10.5, 2.5) -- (12, 2.5) node[midway, above]{(qqq)};
-	\draw[rounded corners, fill=white] (12,2.2) rectangle (13.8, 2.8);
-	\draw (12.9, 2.5) node {baryons};
-	\draw (12.8, 2.1) -- (12.4, 1.6) node[below]{p};
-	\draw (13.0, 2.1) -- (13.4, 1.6) node[below]{n};
+	\draw (9.9, 2.5) -- (10.5, 2.5) -- (10.5, 3.5) -- (12, 3.5) node[midway, above]{(qqq)};
+	\draw[rounded corners, fill=white] (12,3.2) rectangle (13.8, 3.8);
+	\draw (12.9, 3.5) node {baryons};
+	\draw (12.8, 3.1) -- (12.4, 2.6) node[below]{p};
+	\draw (13.0, 3.1) -- (13.4, 2.6) node[below]{n};
 	% mesons
-	\draw (10.5, 1.5) -- (10.5, 0.5) -- (12, 0.5) node[midway, above]{(q$\bar{\text{q}}$)};
-	\draw[rounded corners, fill=white] (12,0.2) rectangle (13.8, 0.8);
-	\draw (12.9, 0.5) node {mesons};
+	\draw (10.5, 2.5) -- (10.5, 1.5) -- (12, 1.5) node[midway, above]{(q$\bar{\text{q}}$)};
+	\draw[rounded corners, fill=white] (12,1.2) rectangle (13.8, 1.8);
+	\draw (12.9, 1.5) node {mesons};
 	\end{tikzpicture}
 	\caption*{a coarse guide for classifying sub-atomic particles in A-Level physics}
 \end{figure}
@@ -725,7 +719,7 @@ classification of sub-atomic particles within the A-Level syllabus\footnote{This
 
 \subsubsection{\texorpdfstring{$\beta$}{\textbeta}-decays}\index{radioactive decay!$\beta$-decay}
 
-recall positron, the anti-particle of electron, so there are two types of $\beta$-particles: $\beta^-$ and $\beta^+$
+there exists positron, anti-particle of electron, so there are two types of $\beta$-particles: $\beta^-$ and $\beta^+$
 
 hence two types of $\beta$-decays are possible: $\beta^-$-decay and $\beta^+$-decay
 
@@ -748,8 +742,6 @@ $\beta^+$-decay occurs when a proton changes into a neutron and emits a positron
 $\beta^+$-decay process is described by the equation: $ \boxed{_1^1 \text{p} \longrightarrow _0^1 \text{n} + _{+1}^{\phantom{+}0}\beta + _0^0 \nu} $
 
 in terms of quarks, $\beta^+$-decay can be rewritten as: $ \boxed{\text{u} \longrightarrow \text{d} + \beta^+ + \nu} $
-
-\vspace*{\baselineskip}
 
 \cmt nature of $\beta$-decay processes is the transformation of quark flavours
 

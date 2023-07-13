@@ -629,9 +629,6 @@ intensity at distance of $r$ from a point source is inversely proportional to $r
 
 \sol $I \propto A^2 \RA \frac{I'}{I} = \left( \frac{A'}{A} \right)^2 = \left( 1 + 50\% \right)^2 =2.25 \RA $ so intensity is increased by 125\% \eoe
 
-\newpage
-
-
 \example{Two observers $A$ and $B$ are at a distance $r_A$ and $r_B$ from a point source where $r_A=2r_B$. (a) Find the ratio of their intensities $\frac{I_A}{I_B}$. (b) Find the ratio of their amplitudes $\frac{A_A}{B_B}$.}
 
 \vspace*{0.8em}\solc
@@ -662,7 +659,7 @@ intensity at distance of $r$ from a point source is inversely proportional to $r
 	\centering
 	\begin{minipage}{0.45\textwidth}
 		\centering
-		\begin{tikzpicture}[scale=0.6]
+		\begin{tikzpicture}[scale=0.64]
 		\draw[very thick, blue, ->] (210:2) -- (30:8) node[twoline, above, black]{direction of\\energy transfer};
 		\foreach \t in {0,45,90,135} {
 			\draw[red, ultra thick, <->] (\t:1.5) --++ ({\t+180}:3);
@@ -676,7 +673,7 @@ intensity at distance of $r$ from a point source is inversely proportional to $r
 	\end{minipage}\hfil
 	\begin{minipage}{0.45\textwidth}
 		\centering
-		\begin{tikzpicture}[scale=0.6]
+		\begin{tikzpicture}[scale=0.64]
 		\draw[very thick, blue, ->] (210:2) -- (30:8) node[twoline, above, black]{direction of\\energy transfer};
 		\foreach \t in {90} {
 			\draw[red, ultra thick, <->] (\t:1.5) --++ ({\t+180}:3);
@@ -727,12 +724,12 @@ direction along which vibration is allowed to pass is called the axis of the pol
 
 \begin{figure}[ht]
 	\centering
-	\begin{tikzpicture}[scale=0.6]
+	\begin{tikzpicture}[scale=0.65]
 	\draw[very thick, blue, ->] (0,0) -- (10,0);	
 	\draw[fill=cyan!30] (0,0) ++ (0,2) ++ (160:2) --++ (-20:4) --++ (0,-4) --++ (160:4) --++ (0,4);
 	\foreach \t in {-1.5,-1,...,1.5} \draw[very thin, gray!80, snake=snake, segment amplitude=0.6] (0,0) ++ (0,\t) ++ (160:1.6) --++ (-20:3.2);
 	\draw[thick, Green, dashed] (0,1.8) -- (0,-1.8);
-	\draw[Green] (0.1,1.2) -- (1.6,3) node[black, right, twoline]{axis of\\polariser};
+	\draw[Green] (0.1,1.2) -- (1.6,3) node[black, right, twoline]{axis of\\transmission};
 	\draw[gray!80] (-1.4,1.6) -- (-3,3) node[black, left, twoline]{direction of alignment\\of molecules};
 	\draw[very thick, blue] (-10,0) -- (0,0);
 	\foreach \t in {-20,40,90,125} {
@@ -855,7 +852,7 @@ a wave with longer wavelength usually diffracts more than a wave of shorter wave
 
 \begin{figure}[htp]
 	\centering
-	\begin{tikzpicture}[scale=.84]
+	\begin{tikzpicture}[scale=1.25]
 	\draw[ultra thick] (0,2.4) -- (0,0.25) (0,-0.25) -- (0,-2.4);
 	\foreach \x in {0.25,0.75,1.25,1.75,2.25}{
 		\draw[blue,thick] (-\x,-2.4) -- (-\x,2.4);
@@ -902,6 +899,8 @@ as long as there is \emph{radial} motion between source and observer, there is s
 	\item[--] \emph{astronomy}: used to study motion of stars and galaxies
 \end{compactitem}
 
+\newpage
+
 \subsubsection*{explanation for Doppler effect}
 
 suppose wave source is moving towards the observer at speed $v_s$
@@ -910,7 +909,7 @@ at time $t=0$, the source emits a wavefront which travels at speed $v$
 
 \begin{figure}[ht]
 	\centering
-	\begin{tikzpicture}[scale=0.9]
+	\begin{tikzpicture}[scale=0.95]
 	\draw[thick] (0,0) circle (0.2);
 	\draw[fill] (12,0.4) circle (0.2);
 	\draw[ultra thick] (12,0.2) -- (12,-0.1) -- (11.8,-0.6) (12,-0.1) -- (12.2,-0.6) (11.75,-0.1) -- (12,0.15) -- (12.25,-0.1);
@@ -926,7 +925,7 @@ at same time, source moves forward by a distance of $v_s T$ and emits a new wave
 
 \begin{figure}[ht]
 	\centering
-	\begin{tikzpicture}[scale=0.9]
+	\begin{tikzpicture}[scale=0.95]
 	\draw[thick,gray!80] (0,0) circle (0.2);
 	\draw[thick] (2,0) circle (0.2);
 	\draw[gray, ->] (0.3,0) -- (1.7,0);
